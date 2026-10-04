@@ -1,3120 +1,1767 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="description" content="Cafetería Kusiy: disfruta cafés, bebidas, postres y productos de panadería en un ambiente cálido y elegante. Realiza tus pedidos y solicita delivery por WhatsApp.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
     <meta name="description"
-        content="Cafetería Kusiy - El arte de disfrutar un buen café. Cafés, bebidas, postres y delivery.">
+        content="Cafetería Kusiy: disfruta cafés, bebidas, postres y productos de panadería en un ambiente cálido y elegante. Realiza tus pedidos y solicita delivery por WhatsApp.">
 
     <meta name="keywords"
-        content="Cafetería Kusiy, café, cafetería, postres, cappuccino, latte, delivery, Cusco">
+        content="Cafetería Kusiy, Kusiy, cafetería Cusco, café Cusco, cafés, cappuccino, latte, postres, delivery Cusco">
 
     <meta name="author" content="Cafetería Kusiy">
-<meta name="google-site-verification" content="kGequIksUZ8CMPG1p6c_8kat98z72g-bhl8AyTzyFg8">
+
+    <!-- VERIFICACIÓN GOOGLE SEARCH CONSOLE -->
+    <meta name="google-site-verification"
+        content="kGequIksUZ8CMPG1p6c_8kat98z72g-bhl8AyTzyFg8">
+
+    <!-- ICONO -->
+    <link rel="icon"
+        href="https://cdn-icons-png.flaticon.com/512/924/924514.png">
+
+    <!-- TÍTULO QUE GOOGLE PUEDE MOSTRAR -->
     <title>Cafetería Kusiy | El arte de disfrutar un buen café</title>
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- ICONOS -->
-    <link rel="stylesheet"
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <style>
 
-        /* =========================================================
-           CONFIGURACIÓN GENERAL
-        ========================================================= */
+<style>
 
-        :root {
-            --negro: #100d0b;
-            --negro-suave: #191411;
-            --marron-oscuro: #2b1b14;
-            --marron: #5b3825;
-            --marron-claro: #8b5e3c;
-            --crema: #f1e4cf;
-            --crema-claro: #faf5ec;
-            --dorado: #c7a45b;
-            --dorado-claro: #e2c47a;
-            --blanco: #ffffff;
-            --gris: #c9c0b5;
-            --sombra: 0 15px 45px rgba(0,0,0,0.35);
-        }
+/* =========================================================
+   VARIABLES
+========================================================= */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+:root {
 
-        html {
-            scroll-behavior: smooth;
-        }
+    --negro: #100d0b;
+    --negro-suave: #191411;
 
-        body {
-            font-family: "Cormorant Garamond", serif;
-            background: var(--negro);
-            color: var(--crema);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+    --marron-oscuro: #2b1b14;
+    --marron: #5b3825;
+    --marron-claro: #8b5e3c;
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    --crema: #f1e4cf;
+    --crema-claro: #faf5ec;
 
-        button {
-            font-family: inherit;
-        }
+    --dorado: #c7a45b;
+    --dorado-claro: #e2c47a;
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
+    --blanco: #ffffff;
+    --gris: #c9c0b5;
 
-
-        /* =========================================================
-           BARRA DE NAVEGACIÓN
-        ========================================================= */
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-
-            background: rgba(16, 13, 11, 0.94);
-            backdrop-filter: blur(10px);
-
-            border-bottom: 1px solid rgba(199,164,91,0.25);
-        }
-
-        .nav-container {
-            max-width: 1250px;
-            margin: auto;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 16px 25px;
-        }
-
-        .logo {
-            font-family: "Cinzel", serif;
-            color: var(--dorado);
-            font-size: 1.65rem;
-            font-weight: 700;
-            letter-spacing: 4px;
-        }
-
-        .logo span {
-            display: block;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 0.75rem;
-            letter-spacing: 3px;
-            text-align: center;
-            color: var(--crema);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 27px;
-        }
-
-        nav a {
-            font-family: "Cinzel", serif;
-            font-size: 0.78rem;
-            letter-spacing: 1px;
-            color: var(--crema);
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--dorado-claro);
-        }
-
-        .menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--crema);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-
-        /* =========================================================
-           HERO
-        ========================================================= */
-
-        .hero {
-            min-height: 100vh;
-
-            position: relative;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-
-            background:
-                linear-gradient(
-                    rgba(10,7,5,0.62),
-                    rgba(10,7,5,0.82)
-                ),
-                url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=2000&q=85");
-
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    transparent 20%,
-                    rgba(0,0,0,0.65) 100%
-                );
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-
-            max-width: 900px;
-            padding: 30px;
-        }
-
-        .hero-small {
-            font-family: "Cinzel", serif;
-            letter-spacing: 6px;
-            color: var(--dorado-claro);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 {
-            font-family: "Cinzel", serif;
-            font-size: clamp(4rem, 12vw, 9rem);
-            line-height: 0.9;
-            letter-spacing: 15px;
-
-            color: var(--crema);
-
-            text-shadow:
-                0 5px 30px rgba(0,0,0,0.8);
-        }
-
-        .hero h2 {
-            font-size: clamp(1.5rem, 3vw, 2.5rem);
-            font-weight: 400;
-            color: var(--dorado-claro);
-            margin: 25px 0 15px;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 650px;
-            margin: auto;
-            color: var(--crema);
-        }
-
-        .hero-buttons {
-            margin-top: 35px;
-
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-
-            padding: 13px 25px;
-
-            border: 1px solid var(--dorado);
-
-            font-family: "Cinzel", serif;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-
-            transition: 0.3s;
-
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--dorado);
-            color: var(--negro);
-        }
-
-        .btn-primary:hover {
-            background: var(--dorado-claro);
-            transform: translateY(-3px);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--crema);
-        }
-
-        .btn-outline:hover {
-            background: var(--dorado);
-            color: var(--negro);
-            transform: translateY(-3px);
-        }
-
-        .scroll-down {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-
-            z-index: 3;
-
-            color: var(--dorado);
-            font-size: 1.5rem;
-
-            animation: bajar 1.7s infinite;
-        }
-
-        @keyframes bajar {
-            0%,100% {
-                transform: translate(-50%,0);
-            }
-
-            50% {
-                transform: translate(-50%,10px);
-            }
-        }
-
-
-        /* =========================================================
-           SECCIONES
-        ========================================================= */
-
-        section {
-            padding: 100px 25px;
-        }
-
-        .container {
-            max-width: 1150px;
-            margin: auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-subtitle {
-            font-family: "Cinzel", serif;
-            color: var(--dorado);
-            font-size: 0.8rem;
-            letter-spacing: 4px;
-            margin-bottom: 10px;
-        }
-
-        .section-title {
-            font-family: "Cinzel", serif;
-            font-size: clamp(2rem, 5vw, 3.3rem);
-            color: var(--crema);
-        }
-
-        .gold-line {
-            width: 80px;
-            height: 2px;
-            background: var(--dorado);
-            margin: 20px auto;
-        }
-
-        .section-description {
-            max-width: 700px;
-            margin: auto;
-            font-size: 1.15rem;
-            color: var(--gris);
-        }
-
-
-        /* =========================================================
-           INTRODUCCIÓN
-        ========================================================= */
-
-        .intro {
-            background:
-                linear-gradient(
-                    135deg,
-                    #17100d,
-                    #291912
-                );
-        }
-
-        .intro-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .intro-image {
-            min-height: 500px;
-
-            background:
-                url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85");
-
-            background-size: cover;
-            background-position: center;
-
-            border: 1px solid rgba(199,164,91,0.4);
-
-            box-shadow: var(--sombra);
-        }
-
-        .intro-text h3 {
-            font-family: "Cinzel", serif;
-            font-size: 2rem;
-            color: var(--dorado-claro);
-            margin-bottom: 20px;
-        }
-
-        .intro-text p {
-            font-size: 1.15rem;
-            color: var(--gris);
-            margin-bottom: 20px;
-        }
-
-        .ornament {
-            color: var(--dorado);
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-
-        /* =========================================================
-           MISIÓN Y VISIÓN
-        ========================================================= */
-
-        .mission {
-            background: var(--crema-claro);
-            color: var(--marron-oscuro);
-        }
-
-        .mission .section-title {
-            color: var(--marron-oscuro);
-        }
-
-        .mission .section-description {
-            color: #69584b;
-        }
-
-        .mission-grid {
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            gap: 30px;
-        }
-
-        .mission-card {
-            padding: 45px 35px;
-
-            border: 1px solid rgba(91,56,37,0.3);
-            background: #f7edde;
-
-            text-align: center;
-
-            transition: 0.4s;
-        }
-
-        .mission-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(45,30,20,0.15);
-        }
-
-        .mission-card i {
-            font-size: 2.5rem;
-            color: var(--marron);
-            margin-bottom: 20px;
-        }
-
-        .mission-card h3 {
-            font-family: "Cinzel", serif;
-            color: var(--marron);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-
-        .mission-card p {
-            font-size: 1.1rem;
-        }
-
-
-        /* =========================================================
-           OBJETIVOS
-        ========================================================= */
-
-        .objectives {
-            background:
-                linear-gradient(
-                    rgba(18,12,9,0.95),
-                    rgba(18,12,9,0.95)
-                ),
-                url("https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1800&q=80");
-
-            background-size: cover;
-            background-position: center;
-        }
-
-        .objective-grid {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 20px;
-        }
-
-        .objective-card {
-            padding: 35px 25px;
-
-            background: rgba(43,27,20,0.75);
-
-            border: 1px solid rgba(199,164,91,0.25);
-
-            transition: 0.35s;
-        }
-
-        .objective-card:hover {
-            transform: translateY(-7px);
-            border-color: var(--dorado);
-            background: rgba(70,43,28,0.8);
-        }
-
-        .objective-number {
-            font-family: "Cinzel", serif;
-            color: var(--dorado);
-            font-size: 2.5rem;
-        }
-
-        .objective-card h3 {
-            font-family: "Cinzel", serif;
-            margin: 12px 0;
-            color: var(--crema);
-        }
-
-        .objective-card p {
-            color: var(--gris);
-        }
-
-
-        /* =========================================================
-           VALORES
-        ========================================================= */
-
-        .values {
-            background: #0e0b09;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            gap: 20px;
-        }
-
-        .value-card {
-            text-align: center;
-            padding: 40px 20px;
-
-            border: 1px solid rgba(199,164,91,0.25);
-
-            transition: 0.35s;
-        }
-
-        .value-card:hover {
-            background: var(--marron-oscuro);
-            transform: translateY(-8px);
-        }
-
-        .value-card i {
-            font-size: 2rem;
-            color: var(--dorado);
-            margin-bottom: 18px;
-        }
-
-        .value-card h3 {
-            font-family: "Cinzel", serif;
-            margin-bottom: 10px;
-        }
-
-        .value-card p {
-            color: var(--gris);
-        }
-
-
-        /* =========================================================
-           CARTA
-        ========================================================= */
-
-        .menu-section {
-            background:
-                linear-gradient(
-                    rgba(35,22,16,0.97),
-                    rgba(25,16,11,0.98)
-                );
-        }
-
-        .menu-categories {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-
-            margin-bottom: 40px;
-        }
-
-        .category-btn {
-            padding: 11px 20px;
-
-            background: transparent;
-            color: var(--crema);
-
-            border: 1px solid rgba(199,164,91,0.4);
-
-            font-family: "Cinzel", serif;
-            font-size: 0.75rem;
-
-            cursor: pointer;
-
-            transition: 0.3s;
-        }
-
-        .category-btn:hover,
-        .category-btn.active {
-            background: var(--dorado);
-            color: var(--negro);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 25px;
-        }
-
-        .product-card {
-            background: #1d130e;
-
-            border: 1px solid rgba(199,164,91,0.2);
-
-            overflow: hidden;
-
-            transition: 0.4s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--sombra);
-            border-color: var(--dorado);
-        }
-
-        .product-image {
-            height: 230px;
-            overflow: hidden;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-
-            transition: 0.5s;
-        }
-
-        .product-card:hover .product-image img {
-            transform: scale(1.08);
-        }
-
-        .product-info {
-            padding: 22px;
-        }
-
-        .product-info h3 {
-            font-family: "Cinzel", serif;
-            color: var(--crema);
-            margin-bottom: 8px;
-        }
-
-        .product-info p {
-            color: var(--gris);
-            font-size: 1rem;
-            min-height: 55px;
-        }
-
-        .product-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            margin-top: 18px;
-        }
-
-        .price {
-            color: var(--dorado-claro);
-            font-family: "Cinzel", serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .add-btn {
-            background: var(--dorado);
-            border: none;
-
-            color: var(--negro);
-
-            padding: 10px 15px;
-
-            cursor: pointer;
-
-            font-weight: bold;
-
-            transition: 0.3s;
-        }
-
-        .add-btn:hover {
-            background: var(--dorado-claro);
-            transform: scale(1.05);
-        }
-
-
-        /* =========================================================
-           CARRITO
-        ========================================================= */
-
-        .cart-box {
-            position: fixed;
-
-            right: 20px;
-            bottom: 90px;
-
-            width: 350px;
-            max-width: calc(100% - 40px);
-
-            background: #21150f;
-
-            border: 1px solid var(--dorado);
-
-            box-shadow: var(--sombra);
-
-            z-index: 900;
-
-            transform: translateY(120%);
-            opacity: 0;
-            pointer-events: none;
-
-            transition: 0.4s;
-        }
-
-        .cart-box.show {
-            transform: translateY(0);
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .cart-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            padding: 18px;
-
-            background: var(--marron-oscuro);
-
-            border-bottom: 1px solid rgba(199,164,91,0.3);
-        }
-
-        .cart-header h3 {
-            font-family: "Cinzel", serif;
-            color: var(--dorado);
-        }
-
-        .close-cart {
-            background: none;
-            border: none;
-            color: var(--crema);
-            cursor: pointer;
-            font-size: 1.2rem;
-        }
-
-        .cart-items {
-            max-height: 300px;
-            overflow-y: auto;
-            padding: 15px;
-        }
-
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-
-            padding: 12px 0;
-
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .cart-item-name {
-            font-weight: 600;
-        }
-
-        .cart-item-price {
-            color: var(--dorado);
-        }
-
-        .cart-item-controls {
-            display: flex;
-            gap: 5px;
-            align-items: center;
-        }
-
-        .cart-item-controls button {
-            width: 25px;
-            height: 25px;
-
-            border: none;
-            background: var(--marron);
-            color: white;
-
-            cursor: pointer;
-        }
-
-        .cart-total {
-            padding: 18px;
-
-            display: flex;
-            justify-content: space-between;
-
-            font-family: "Cinzel", serif;
-
-            border-top: 1px solid rgba(199,164,91,0.3);
-        }
-
-        .cart-total strong {
-            color: var(--dorado-claro);
-        }
-
-        .cart-actions {
-            padding: 15px;
-        }
-
-        .cart-actions button {
-            width: 100%;
-            border: none;
-            padding: 13px;
-
-            background: #25D366;
-            color: white;
-
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .empty-cart {
-            text-align: center;
-            color: var(--gris);
-            padding: 30px 10px;
-        }
-
-        .cart-floating {
-            position: fixed;
-
-            right: 25px;
-            bottom: 25px;
-
-            width: 58px;
-            height: 58px;
-
-            border-radius: 50%;
-
-            background: var(--dorado);
-            color: var(--negro);
-
-            border: none;
-
-            font-size: 1.3rem;
-
-            cursor: pointer;
-
-            z-index: 1000;
-
-            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
-
-            transition: 0.3s;
-        }
-
-        .cart-floating:hover {
-            transform: scale(1.1);
-        }
-
-        .cart-count {
-            position: absolute;
-
-            top: -5px;
-            right: -5px;
-
-            width: 22px;
-            height: 22px;
-
-            border-radius: 50%;
-
-            background: #b7352c;
-            color: white;
-
-            font-size: 0.75rem;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-
-        /* =========================================================
-           GALERÍA
-        ========================================================= */
-
-        .gallery {
-            background: var(--crema-claro);
-        }
-
-        .gallery .section-title {
-            color: var(--marron-oscuro);
-        }
-
-        .gallery-grid {
-            display: grid;
-
-            grid-template-columns: repeat(4,1fr);
-
-            grid-auto-rows: 230px;
-
-            gap: 12px;
-        }
-
-        .gallery-item {
-            overflow: hidden;
-            position: relative;
-        }
-
-        .gallery-item.large {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-
-            transition: 0.5s;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.08);
-        }
-
-
-        /* =========================================================
-           TESTIMONIOS
-        ========================================================= */
-
-        .testimonials {
-            background: var(--marron-oscuro);
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 25px;
-        }
-
-        .testimonial {
-            padding: 30px;
-
-            background: rgba(0,0,0,0.2);
-
-            border: 1px solid rgba(199,164,91,0.25);
-        }
-
-        .stars {
-            color: var(--dorado);
-            margin-bottom: 15px;
-        }
-
-        .testimonial p {
-            color: var(--gris);
-            font-size: 1.1rem;
-            font-style: italic;
-        }
-
-        .testimonial strong {
-            display: block;
-            margin-top: 20px;
-            color: var(--crema);
-        }
-
-
-        /* =========================================================
-           DELIVERY
-        ========================================================= */
-
-        .delivery {
-            background:
-                linear-gradient(
-                    rgba(16,11,8,0.82),
-                    rgba(16,11,8,0.95)
-                ),
-                url("https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1800&q=85");
-
-            background-size: cover;
-            background-position: center;
-
-            text-align: center;
-        }
-
-        .delivery-box {
-            max-width: 800px;
-            margin: auto;
-
-            padding: 60px 30px;
-
-            border: 1px solid rgba(199,164,91,0.35);
-
-            background: rgba(20,12,8,0.65);
-        }
-
-        .delivery-box i {
-            font-size: 3rem;
-            color: var(--dorado);
-            margin-bottom: 20px;
-        }
-
-        .delivery-box h2 {
-            font-family: "Cinzel", serif;
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .delivery-box p {
-            color: var(--gris);
-            font-size: 1.2rem;
-            margin-bottom: 25px;
-        }
-
-        .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-
-            padding: 14px 25px;
-
-            background: #25D366;
-            color: white;
-
-            font-family: "Cinzel", serif;
-
-            transition: 0.3s;
-        }
-
-        .whatsapp-btn:hover {
-            transform: translateY(-3px);
-            background: #1ebe5d;
-        }
-
-
-        /* =========================================================
-           INFORMACIÓN
-        ========================================================= */
-
-        .info {
-            background: #0d0a08;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 25px;
-        }
-
-        .info-card {
-            text-align: center;
-            padding: 35px 20px;
-
-            border: 1px solid rgba(199,164,91,0.25);
-        }
-
-        .info-card i {
-            color: var(--dorado);
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .info-card h3 {
-            font-family: "Cinzel", serif;
-            color: var(--dorado-claro);
-            margin-bottom: 10px;
-        }
-
-        .info-card p {
-            color: var(--gris);
-        }
-
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
-        footer {
-            background: #080605;
-
-            border-top: 1px solid rgba(199,164,91,0.25);
-
-            text-align: center;
-
-            padding: 50px 20px;
-        }
-
-        .footer-logo {
-            font-family: "Cinzel", serif;
-            color: var(--dorado);
-            font-size: 2rem;
-            letter-spacing: 5px;
-        }
-
-        footer p {
-            color: var(--gris);
-            margin-top: 10px;
-        }
-
-        .socials {
-            margin: 25px 0;
-
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .socials a {
-            width: 40px;
-            height: 40px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border: 1px solid rgba(199,164,91,0.35);
-
-            color: var(--dorado);
-
-            transition: 0.3s;
-        }
-
-        .socials a:hover {
-            background: var(--dorado);
-            color: var(--negro);
-        }
-
-        .copyright {
-            font-size: 0.9rem;
-            color: #8e8379;
-        }
-
-
-        /* =========================================================
-           BOTÓN WHATSAPP
-        ========================================================= */
-
-        .whatsapp-floating {
-            position: fixed;
-
-            left: 25px;
-            bottom: 25px;
-
-            width: 58px;
-            height: 58px;
-
-            border-radius: 50%;
-
-            background: #25D366;
-            color: white;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 1.5rem;
-
-            z-index: 1000;
-
-            box-shadow: 0 5px 25px rgba(0,0,0,0.4);
-
-            transition: 0.3s;
-        }
-
-        .whatsapp-floating:hover {
-            transform: scale(1.1);
-        }
-
-
-        /* =========================================================
-           BOTÓN ARRIBA
-        ========================================================= */
-
-        .top-btn {
-            position: fixed;
-
-            right: 25px;
-            bottom: 100px;
-
-            width: 45px;
-            height: 45px;
-
-            background: var(--marron);
-
-            color: var(--dorado);
-
-            border: 1px solid rgba(199,164,91,0.4);
-
-            cursor: pointer;
-
-            opacity: 0;
-            pointer-events: none;
-
-            transition: 0.3s;
-
-            z-index: 800;
-        }
-
-        .top-btn.show {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-
-        /* =========================================================
-           ANIMACIONES
-        ========================================================= */
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(35px);
-
-            transition: 0.8s;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-
-        /* =========================================================
-           RESPONSIVE
-        ========================================================= */
-
-        @media (max-width: 950px) {
-
-            nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-
-                background: rgba(16,13,11,0.98);
-
-                display: none;
-            }
-
-            nav.open {
-                display: block;
-            }
-
-            nav ul {
-                flex-direction: column;
-                padding: 20px;
-                gap: 18px;
-            }
-
-            .menu-btn {
-                display: block;
-            }
-
-            .intro-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .objective-grid {
-                grid-template-columns: repeat(2,1fr);
-            }
-
-            .values-grid {
-                grid-template-columns: repeat(2,1fr);
-            }
-
-            .products-grid {
-                grid-template-columns: repeat(2,1fr);
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(2,1fr);
-            }
-
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-
-        @media (max-width: 650px) {
-
-            section {
-                padding: 75px 18px;
-            }
-
-            .hero {
-                background-attachment: scroll;
-            }
-
-            .hero h1 {
-                letter-spacing: 8px;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .hero-buttons .btn {
-                width: 100%;
-            }
-
-            .mission-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .objective-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .values-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr 1fr;
-                grid-auto-rows: 170px;
-            }
-
-            .gallery-item.large {
-                grid-column: span 2;
-                grid-row: span 2;
-            }
-
-            .cart-box {
-                right: 10px;
-                bottom: 85px;
-                width: calc(100% - 20px);
-            }
-
-            .whatsapp-floating {
-                left: 15px;
-                bottom: 15px;
-            }
-
-            .cart-floating {
-                right: 15px;
-                bottom: 15px;
-            }
-
-            .top-btn {
-                right: 15px;
-                bottom: 85px;
-            }
-        }
-
-    </style>
-</head>
-
-
-<body>
-
-
-<!-- ============================================================
-     NAVEGACIÓN
-============================================================ -->
-
-<header>
-
-    <div class="nav-container">
-
-        <a href="#inicio" class="logo">
-            KUSIY
-            <span>CAFETERÍA</span>
-        </a>
-
-        <button class="menu-btn" id="menuBtn">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <nav id="navMenu">
-
-            <ul>
-
-                <li>
-                    <a href="#inicio">Inicio</a>
-                </li>
-
-                <li>
-                    <a href="#nosotros">Nosotros</a>
-                </li>
-
-                <li>
-                    <a href="#objetivos">Objetivos</a>
-                </li>
-
-                <li>
-                    <a href="#valores">Valores</a>
-                </li>
-
-                <li>
-                    <a href="#carta">Carta</a>
-                </li>
-
-                <li>
-                    <a href="#galeria">Galería</a>
-                </li>
-
-                <li>
-                    <a href="#delivery">Delivery</a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </div>
-
-</header>
-
-
-<!-- ============================================================
-     HERO
-============================================================ -->
-
-<section class="hero" id="inicio">
-
-    <div class="hero-content">
-
-        <div class="hero-small">
-            CAFÉ · ARTE · EXPERIENCIA
-        </div>
-
-        <h1>KUSIY</h1>
-
-        <h2>El arte de disfrutar un buen café</h2>
-
-        <p>
-            Un espacio donde el aroma del café, los sabores
-            y la calidez se encuentran para crear momentos
-            que merecen ser disfrutados.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#carta" class="btn btn-primary">
-                <i class="fas fa-mug-hot"></i>
-                VER NUESTRA CARTA
-            </a>
-
-            <a href="#nosotros" class="btn btn-outline">
-                CONÓCENOS
-            </a>
-
-        </div>
-
-    </div>
-
-    <a href="#nosotros" class="scroll-down">
-        <i class="fas fa-chevron-down"></i>
-    </a>
-
-</section>
-
-
-<!-- ============================================================
-     INTRODUCCIÓN
-============================================================ -->
-
-<section class="intro" id="nosotros">
-
-    <div class="container">
-
-        <div class="intro-grid">
-
-            <div class="intro-image reveal"></div>
-
-            <div class="intro-text reveal">
-
-                <div class="ornament">❦</div>
-
-                <h3>Una cafetería para disfrutar sin prisa</h3>
-
-                <p>
-                    En Cafetería Kusiy creemos que tomar un café
-                    es mucho más que beber una taza caliente.
-                    Es una oportunidad para conversar, descansar,
-                    compartir y disfrutar de los pequeños momentos.
-                </p>
-
-                <p>
-                    Nuestra propuesta combina el sabor del buen café
-                    con una experiencia acogedora, elegante y cercana,
-                    buscando que cada visita tenga algo especial.
-                </p>
-
-                <p>
-                    Desde una taza de café recién preparado hasta
-                    un postre para acompañar la tarde, cada detalle
-                    busca transmitir nuestra esencia.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ============================================================
-     MISIÓN Y VISIÓN
-============================================================ -->
-
-<section class="mission">
-
-    <div class="container">
-
-        <div class="section-header reveal">
-
-            <div class="section-subtitle">
-                NUESTRA ESENCIA
-            </div>
-
-            <h2 class="section-title">
-                Misión y Visión
-            </h2>
-
-            <div class="gold-line"></div>
-
-        </div>
-
-
-        <div class="mission-grid">
-
-            <article class="mission-card reveal">
-
-                <i class="fas fa-heart"></i>
-
-                <h3>Misión</h3>
-
-                <p>
-                    Brindar una experiencia de cafetería agradable,
-                    ofreciendo bebidas y alimentos de calidad,
-                    acompañados de una atención cálida y cercana
-                    que permita a nuestros clientes disfrutar,
-                    compartir y sentirse cómodos en cada visita.
-                </p>
-
-            </article>
-
-
-            <article class="mission-card reveal">
-
-                <i class="fas fa-eye"></i>
-
-                <h3>Visión</h3>
-
-                <p>
-                    Ser una cafetería reconocida por la calidad
-                    de sus productos, la atención al cliente y
-                    una experiencia diferenciada, logrando
-                    posicionarnos como un espacio preferido para
-                    disfrutar del café y compartir momentos especiales.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ============================================================
-     OBJETIVOS
-============================================================ -->
-
-<section class="objectives" id="objetivos">
-
-    <div class="container">
-
-        <div class="section-header reveal">
-
-            <div class="section-subtitle">
-                HACIA DÓNDE VAMOS
-            </div>
-
-            <h2 class="section-title">
-                Objetivos Estratégicos
-            </h2>
-
-            <div class="gold-line"></div>
-
-            <p class="section-description">
-                Nuestro crecimiento se basa en mejorar constantemente
-                nuestros productos, servicio y relación con nuestros clientes.
-            </p>
-
-        </div>
-
-
-        <div class="objective-grid">
-
-            <article class="objective-card reveal">
-
-                <div class="objective-number">01</div>
-
-                <h3>Calidad</h3>
-
-                <p>
-                    Mantener estándares de calidad en la preparación
-                    de bebidas y alimentos, cuidando los ingredientes
-                    y cada etapa del proceso.
-                </p>
-
-            </article>
-
-
-            <article class="objective-card reveal">
-
-                <div class="objective-number">02</div>
-
-                <h3>Experiencia</h3>
-
-                <p>
-                    Crear un ambiente acogedor y diferenciado donde
-                    los clientes puedan relajarse y disfrutar de
-                    cada momento.
-                </p>
-
-            </article>
-
-
-            <article class="objective-card reveal">
-
-                <div class="objective-number">03</div>
-
-                <h3>Atención</h3>
-
-                <p>
-                    Ofrecer una atención amable, respetuosa y eficiente,
-                    buscando responder adecuadamente a las necesidades
-                    de nuestros clientes.
-                </p>
-
-            </article>
-
-
-            <article class="objective-card reveal">
-
-                <div class="objective-number">04</div>
-
-                <h3>Innovación</h3>
-
-                <p>
-                    Incorporar nuevos productos, combinaciones y
-                    propuestas que permitan mantener una carta
-                    atractiva y dinámica.
-                </p>
-
-            </article>
-
-
-            <article class="objective-card reveal">
-
-                <div class="objective-number">05</div>
-
-                <h3>Crecimiento</h3>
-
-                <p>
-                    Incrementar progresivamente nuestra presencia
-                    y reconocimiento dentro del mercado local.
-                </p>
-
-            </article>
-
-
-            <article class="objective-card reveal">
-
-                <div class="objective-number">06</div>
-
-                <h3>Fidelización</h3>
-
-                <p>
-                    Construir relaciones duraderas con nuestros
-                    clientes mediante calidad, atención y experiencias
-                    positivas.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ============================================================
-     VALORES
-============================================================ -->
-
-<section class="values" id="valores">
-
-    <div class="container">
-
-        <div class="section-header reveal">
-
-            <div class="section-subtitle">
-                LO QUE NOS REPRESENTA
-            </div>
-
-            <h2 class="section-title">
-                Nuestros Valores
-            </h2>
-
-            <div class="gold-line"></div>
-
-        </div>
-
-
-        <div class="values-grid">
-
-            <article class="value-card reveal">
-
-                <i class="fas fa-mug-hot"></i>
-
-                <h3>Calidez</h3>
-
-                <p>
-                    Buscamos que cada persona se sienta bienvenida
-                    y cómoda en nuestro espacio.
-                </p>
-
-            </article>
-
-
-            <article class="value-card reveal">
-
-                <i class="fas fa-star"></i>
-
-                <h3>Calidad</h3>
-
-                <p>
-                    Cuidamos nuestros productos y la experiencia
-                    que ofrecemos.
-                </p>
-
-            </article>
-
-
-            <article class="value-card reveal">
-
-                <i class="fas fa-handshake"></i>
-
-                <h3>Respeto</h3>
-
-                <p>
-                    Tratamos a nuestros clientes y colaboradores
-                    con consideración y respeto.
-                </p>
-
-            </article>
-
-
-            <article class="value-card reveal">
-
-                <i class="fas fa-lightbulb"></i>
-
-                <h3>Creatividad</h3>
-
-                <p>
-                    Buscamos nuevas ideas para ofrecer propuestas
-                    diferentes y atractivas.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ============================================================
-     CARTA
-============================================================ -->
-
-<section class="menu-section" id="carta">
-
-    <div class="container">
-
-        <div class="section-header reveal">
-
-            <div class="section-subtitle">
-                NUESTRA CARTA
-            </div>
-
-            <h2 class="section-title">
-                Sabores de Kusiy
-            </h2>
-
-            <div class="gold-line"></div>
-
-            <p class="section-description">
-                Elige tus favoritos y agrégalos a tu pedido.
-                Puedes enviarlo directamente por WhatsApp.
-            </p>
-
-        </div>
-
-
-        <!-- CATEGORÍAS -->
-
-        <div class="menu-categories">
-
-            <button class="category-btn active" data-category="todos">
-                TODOS
-            </button>
-
-            <button class="category-btn" data-category="cafe">
-                CAFÉS
-            </button>
-
-            <button class="category-btn" data-category="bebidas">
-                BEBIDAS
-            </button>
-
-            <button class="category-btn" data-category="postres">
-                POSTRES
-            </button>
-
-            <button class="category-btn" data-category="pan">
-                PANADERÍA
-            </button>
-
-        </div>
-
-
-        <!-- PRODUCTOS -->
-
-        <div class="products-grid">
-
-
-            <!-- CAFÉS -->
-
-            <article class="product-card reveal" data-category="cafe">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=800&q=80"
-                        alt="Café Americano">
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Café Americano</h3>
-
-                    <p>
-                        Café intenso y aromático preparado
-                        para disfrutar su sabor de manera clásica.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">S/ 7.00</span>
-
-                        <button
-                            class="add-btn"
-                            onclick="addToCart('Café Americano', 7)">
-                            <i class="fas fa-plus"></i>
-                            PEDIR
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="product-card reveal" data-category="cafe">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80"
-                        alt="Cappuccino">
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Cappuccino</h3>
-
-                    <p>
-                        Espresso combinado con leche vaporizada
-                        y una delicada capa de espuma.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">S/ 10.00</span>
-
-                        <button
-                            class="add-btn"
-                            onclick="addToCart('Cappuccino', 10)">
-                            <i class="fas fa-plus"></i>
-                            PEDIR
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="product-card reveal" data-category="cafe">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80"
-                        alt="Latte">
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Latte</h3>
-
-                    <p>
-                        Espresso suave con abundante leche
-                        vaporizada y textura cremosa.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">S/ 10.00</span>
-
-                        <button
-                            class="add-btn"
-                            onclick="addToCart('Latte', 10)">
-                            <i class="fas fa-plus"></i>
-                            PEDIR
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="product-card reveal" data-category="cafe">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=800&q=80"
-                        alt="Mocha">
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Mocha</h3>
-
-                    <p>
-                        La combinación del café con chocolate
-                        y leche para un sabor dulce y equilibrado.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">S/ 12.00</span>
-
-                        <button
-                            class="add-btn"
-                            onclick="addToCart('Mocha', 12)">
-                            <i class="fas fa-plus"></i>
-                            PEDIR
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- BEBIDAS -->
-
-            <article class="product-card reveal" data-category="bebidas">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=800&q=80"
-                        alt="Frappé de café">
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Frappé de Café</h3>
-
-                    <p>
-                        Bebida fría de café con textura cremosa,
-                        perfecta para una tarde especial.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">S/ 13.00</span>
-
-                        <button
-                            class="add-btn"
-                            onclick="addToCart('Frappé de Café', 13)">
-                            <i class="fas fa-plus"></i>
-                            PEDIR
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="product-card reveal" data-category="bebidas">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=800&q=80"
-                        alt="Chocolate caliente">
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Chocolate Caliente</h3>
-
-                    <p>
-                        Chocolate caliente, cremoso y reconfortante
-                        para disfrutar en cualquier momento.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">S/ 9.00</span>
-
-                        <button
-                            class="add-btn"
-                            onclick="addToCart('Chocolate Caliente', 9)">
-                            <i class="fas fa-plus"></i>
-                            PEDIR
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="product-card reveal" data-category="bebidas">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80"
-                        alt="Bebida natural">
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Bebida Natural</h3>
-
-                    <p>
-                        Una alternativa refrescante para acompañar
-                        tus alimentos y disfrutar de algo ligero.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">S/ 8.00</span>
-
-                        <button
-                            class="add-btn"
-                            onclick="addToCart('Bebida Natural', 8)">
-                            <i class="fas fa-plus"></i>
-                            PEDIR
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- POSTRES -->
-
-            <article class="product-card reveal" data-category="postres">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80"
-                        alt="Cheesecake">
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Cheesecake</h3>
-
-                    <p>
-                        Postre cremoso con una textura suave,
-                        ideal para acompañar una taza de café.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">S/ 12.00</span>
-
-                        <button
-                            class="add-btn"
-                            onclick="addToCart('Cheesecake', 12)">
-                            <i class="fas fa-plus"></i>
-                            PEDIR
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="product-card reveal" data-category="postres">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80"
-                        alt="Brownie">
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Brownie de Chocolate</h3>
-
-                    <p>
-                        Brownie de chocolate con textura húmeda
-                        y sabor intenso.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">S/ 9.00</span>
-
-                        <button
-                            class="add-btn"
-                            onclick="addToCart('Brownie de Chocolate', 9)">
-                            <i class="fas fa-plus"></i>
-                            PEDIR
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="product-card reveal" data-category="postres">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80"
-                        alt="Donas">
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Donas</h3>
-
-                    <p>
-                        Donas suaves y dulces para acompañar
-                        tus bebidas favoritas.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">S/ 7.00</span>
-
-                        <button
-                            class="add-btn"
-                            onclick="addToCart('Donas', 7)">
-                            <i class="fas fa-plus"></i>
-                            PEDIR
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PANADERÍA -->
-
-            <article class="product-card reveal" data-category="pan">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80"
-                        alt="Croissant">
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Croissant</h3>
-
-                    <p>
-                        Masa hojaldrada y ligera, perfecta para
-                        acompañar tu café de la mañana.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">S/ 8.00</span>
-
-                        <button
-                            class="add-btn"
-                            onclick="addToCart('Croissant', 8)">
-                            <i class="fas fa-plus"></i>
-                            PEDIR
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="product-card reveal" data-category="pan">
-
-                <div class="product-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80"
-                        alt="Pan artesanal">
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Pan Artesanal</h3>
-
-                    <p>
-                        Pan de elaboración artesanal para disfrutar
-                        solo o acompañado de una bebida caliente.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="price">S/ 6.00</span>
-
-                        <button
-                            class="add-btn"
-                            onclick="addToCart('Pan Artesanal', 6)">
-                            <i class="fas fa-plus"></i>
-                            PEDIR
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ============================================================
-     GALERÍA
-============================================================ -->
-
-<section class="gallery" id="galeria">
-
-    <div class="container">
-
-        <div class="section-header reveal">
-
-            <div class="section-subtitle">
-                NUESTRO AMBIENTE
-            </div>
-
-            <h2 class="section-title">
-                Galería Kusiy
-            </h2>
-
-            <div class="gold-line"></div>
-
-        </div>
-
-
-        <div class="gallery-grid">
-
-            <div class="gallery-item large reveal">
-
-                <img
-                    src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=1200&q=85"
-                    alt="Interior de cafetería">
-
-            </div>
-
-
-            <div class="gallery-item reveal">
-
-                <img
-                    src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80"
-                    alt="Cafetería">
-
-            </div>
-
-
-            <div class="gallery-item reveal">
-
-                <img
-                    src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80"
-                    alt="Café">
-
-            </div>
-
-
-            <div class="gallery-item reveal">
-
-                <img
-                    src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&w=800&q=80"
-                    alt="Taza de café">
-
-            </div>
-
-
-            <div class="gallery-item reveal">
-
-                <img
-                    src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80"
-                    alt="Mesa de cafetería">
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ============================================================
-     TESTIMONIOS
-============================================================ -->
-
-<section class="testimonials">
-
-    <div class="container">
-
-        <div class="section-header reveal">
-
-            <div class="section-subtitle">
-                EXPERIENCIAS
-            </div>
-
-            <h2 class="section-title">
-                Lo que queremos transmitir
-            </h2>
-
-            <div class="gold-line"></div>
-
-        </div>
-
-
-        <div class="testimonial-grid">
-
-            <article class="testimonial reveal">
-
-                <div class="stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    “Un espacio agradable para conversar,
-                    tomar un café y desconectarse un momento
-                    de la rutina.”
-                </p>
-
-                <strong>
-                    — Cliente Kusiy
-                </strong>
-
-            </article>
-
-
-            <article class="testimonial reveal">
-
-                <div class="stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    “La combinación entre café y postre hace
-                    que sea una opción perfecta para una tarde
-                    tranquila.”
-                </p>
-
-                <strong>
-                    — Cliente Kusiy
-                </strong>
-
-            </article>
-
-
-            <article class="testimonial reveal">
-
-                <div class="stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    “La idea es que cada visita se sienta
-                    especial y que siempre exista un motivo
-                    para regresar.”
-                </p>
-
-                <strong>
-                    — Cliente Kusiy
-                </strong>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ============================================================
-     DELIVERY
-============================================================ -->
-
-<section class="delivery" id="delivery">
-
-    <div class="container">
-
-        <div class="delivery-box reveal">
-
-            <i class="fas fa-motorcycle"></i>
-
-            <h2>
-                Kusiy también llega a ti
-            </h2>
-
-            <p>
-                ¿Quieres disfrutar nuestros productos desde casa,
-                la universidad o el trabajo?
-                Realiza tu pedido por WhatsApp.
-            </p>
-
-            <a
-                href="https://wa.me/51962130192?text=Hola%20Cafeter%C3%ADa%20Kusiy%2C%20quisiera%20realizar%20un%20pedido."
-                target="_blank"
-                class="whatsapp-btn">
-
-                <i class="fab fa-whatsapp"></i>
-
-                PEDIR POR WHATSAPP
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ============================================================
-     INFORMACIÓN
-============================================================ -->
-
-<section class="info">
-
-    <div class="container">
-
-        <div class="info-grid">
-
-
-            <article class="info-card reveal">
-
-                <i class="fas fa-clock"></i>
-
-                <h3>Horarios</h3>
-
-                <p>
-                    Lunes a Domingo<br>
-                    8:00 AM — 9:00 PM
-                </p>
-
-            </article>
-
-
-            <article class="info-card reveal">
-
-                <i class="fas fa-phone"></i>
-
-                <h3>Pedidos</h3>
-
-                <p>
-                    +51 962 130 192
-                </p>
-
-            </article>
-
-
-            <article class="info-card reveal">
-
-                <i class="fas fa-location-dot"></i>
-
-                <h3>Ubicación</h3>
-
-                <p>
-                    Cusco, Perú
-                </p>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ============================================================
-     FOOTER
-============================================================ -->
-
-<footer>
-
-    <div class="footer-logo">
-        KUSIY
-    </div>
-
-    <p>
-        El arte de disfrutar un buen café.
-    </p>
-
-
-    <div class="socials">
-
-        <a href="#" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-
-        <a href="#" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-
-        <a
-            href="https://wa.me/51962130192"
-            target="_blank"
-            aria-label="WhatsApp">
-
-            <i class="fab fa-whatsapp"></i>
-
-        </a>
-
-    </div>
-
-
-    <div class="copyright">
-
-        © 2026 Cafetería Kusiy.
-        Todos los derechos reservados.
-
-    </div>
-
-</footer>
-
-
-<!-- ============================================================
-     CARRITO
-============================================================ -->
-
-<div class="cart-box" id="cartBox">
-
-    <div class="cart-header">
-
-        <h3>
-            <i class="fas fa-shopping-basket"></i>
-            Mi pedido
-        </h3>
-
-        <button class="close-cart" onclick="toggleCart()">
-            <i class="fas fa-times"></i>
-        </button>
-
-    </div>
-
-
-    <div class="cart-items" id="cartItems">
-
-        <div class="empty-cart">
-            Tu pedido está vacío.
-        </div>
-
-    </div>
-
-
-    <div class="cart-total">
-
-        <span>
-            Total
-        </span>
-
-        <strong id="cartTotal">
-            S/ 0.00
-        </strong>
-
-    </div>
-
-
-    <div class="cart-actions">
-
-        <button onclick="sendWhatsApp()">
-
-            <i class="fab fa-whatsapp"></i>
-
-            ENVIAR PEDIDO POR WHATSAPP
-
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- ============================================================
-     BOTONES FLOTANTES
-============================================================ -->
-
-<a
-    href="https://wa.me/51962130192?text=Hola%20Cafeter%C3%ADa%20Kusiy%2C%20quisiera%20hacer%20una%20consulta."
-    target="_blank"
-    class="whatsapp-floating"
-    aria-label="WhatsApp">
-
-    <i class="fab fa-whatsapp"></i>
-
-</a>
-
-
-<button
-    class="cart-floating"
-    onclick="toggleCart()"
-    aria-label="Abrir carrito">
-
-    <i class="fas fa-shopping-basket"></i>
-
-    <span class="cart-count" id="cartCount">
-        0
-    </span>
-
-</button>
-
-
-<button
-    class="top-btn"
-    id="topBtn"
-    onclick="window.scrollTo({top:0, behavior:'smooth'})">
-
-    <i class="fas fa-arrow-up"></i>
-
-</button>
-
-
-<!-- ============================================================
-     JAVASCRIPT
-============================================================ -->
-
-<script>
+    --sombra:
+        0 15px 45px rgba(0,0,0,0.35);
+}
 
 
 /* =========================================================
-   MENÚ MÓVIL
+   GENERAL
 ========================================================= */
 
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
+* {
 
-menuBtn.addEventListener("click", () => {
+    margin: 0;
+    padding: 0;
 
-    navMenu.classList.toggle("open");
+    box-sizing: border-box;
 
-});
+    scroll-behavior: smooth;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    background:
+        var(--negro);
+
+    color:
+        var(--crema);
+
+    line-height:
+        1.6;
+
+    overflow-x:
+        hidden;
+
+}
+
+a {
+
+    text-decoration:
+        none;
+
+    color:
+        inherit;
+
+}
+
+button {
+
+    font-family:
+        inherit;
+
+}
+
+img {
+
+    max-width:
+        100%;
+
+    display:
+        block;
+
+}
 
 
-document.querySelectorAll("nav a").forEach(link => {
+/* =========================================================
+   HEADER
+========================================================= */
 
-    link.addEventListener("click", () => {
+header {
 
-        navMenu.classList.remove("open");
+    position:
+        fixed;
 
-    });
+    top:
+        0;
 
-});
+    left:
+        0;
+
+    width:
+        100%;
+
+    z-index:
+        1000;
+
+    background:
+        rgba(16,13,11,0.95);
+
+    backdrop-filter:
+        blur(10px);
+
+    border-bottom:
+        1px solid
+        rgba(199,164,91,0.25);
+
+}
+
+.nav-container {
+
+    max-width:
+        1250px;
+
+    margin:
+        auto;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        16px 25px;
+
+}
+
+.logo {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    color:
+        var(--dorado);
+
+    font-size:
+        1.65rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        4px;
+
+}
+
+.logo span {
+
+    display:
+        block;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        0.75rem;
+
+    letter-spacing:
+        3px;
+
+    text-align:
+        center;
+
+    color:
+        var(--crema);
+
+}
+
+nav ul {
+
+    display:
+        flex;
+
+    list-style:
+        none;
+
+    gap:
+        27px;
+
+}
+
+nav a {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        0.78rem;
+
+    letter-spacing:
+        1px;
+
+    color:
+        var(--crema);
+
+    transition:
+        0.3s;
+
+}
+
+nav a:hover {
+
+    color:
+        var(--dorado-claro);
+
+}
+
+.menu-btn {
+
+    display:
+        none;
+
+    background:
+        none;
+
+    border:
+        none;
+
+    color:
+        var(--crema);
+
+    font-size:
+        1.5rem;
+
+    cursor:
+        pointer;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height:
+        100vh;
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    background:
+
+        linear-gradient(
+            rgba(10,7,5,0.62),
+            rgba(10,7,5,0.82)
+        ),
+
+        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=2000&q=85");
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+    background-attachment:
+        fixed;
+
+}
+
+.hero::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 20%,
+            rgba(0,0,0,0.65) 100%
+        );
+
+}
+
+.hero-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    max-width:
+        900px;
+
+    padding:
+        30px;
+
+}
+
+.hero-small {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    letter-spacing:
+        6px;
+
+    color:
+        var(--dorado-claro);
+
+    font-size:
+        0.9rem;
+
+    margin-bottom:
+        15px;
+
+}
+
+.hero h1 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(4rem,12vw,9rem);
+
+    line-height:
+        0.9;
+
+    letter-spacing:
+        15px;
+
+    color:
+        var(--crema);
+
+    text-shadow:
+        0 5px 30px
+        rgba(0,0,0,0.8);
+
+}
+
+.hero h2 {
+
+    font-size:
+        clamp(1.5rem,3vw,2.5rem);
+
+    font-weight:
+        400;
+
+    color:
+        var(--dorado-claro);
+
+    margin:
+        25px 0 15px;
+
+}
+
+.hero p {
+
+    font-size:
+        1.25rem;
+
+    max-width:
+        650px;
+
+    margin:
+        auto;
+
+    color:
+        var(--crema);
+
+}
+
+.hero-buttons {
+
+    margin-top:
+        35px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    gap:
+        15px;
+
+    flex-wrap:
+        wrap;
+
+}
+
+.btn {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        9px;
+
+    padding:
+        13px 25px;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        0.8rem;
+
+    letter-spacing:
+        1px;
+
+    transition:
+        0.3s;
+
+    cursor:
+        pointer;
+
+}
+
+.btn-primary {
+
+    background:
+        var(--dorado);
+
+    color:
+        var(--negro);
+
+}
+
+.btn-primary:hover {
+
+    background:
+        var(--dorado-claro);
+
+    transform:
+        translateY(-3px);
+
+}
+
+.btn-outline {
+
+    background:
+        transparent;
+
+    color:
+        var(--crema);
+
+}
+
+.btn-outline:hover {
+
+    background:
+        var(--dorado);
+
+    color:
+        var(--negro);
+
+    transform:
+        translateY(-3px);
+
+}
+
+.scroll-down {
+
+    position:
+        absolute;
+
+    bottom:
+        30px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    z-index:
+        3;
+
+    color:
+        var(--dorado);
+
+    font-size:
+        1.5rem;
+
+    animation:
+        bajar 1.7s infinite;
+
+}
+
+@keyframes bajar {
+
+    0%,100% {
+        transform:
+            translate(-50%,0);
+    }
+
+    50% {
+        transform:
+            translate(-50%,10px);
+    }
+
+}
+
+
+/* =========================================================
+   SECCIONES
+========================================================= */
+
+section {
+
+    padding:
+        100px 25px;
+
+}
+
+.container {
+
+    max-width:
+        1150px;
+
+    margin:
+        auto;
+
+}
+
+.section-header {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        60px;
+
+}
+
+.section-subtitle {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    color:
+        var(--dorado);
+
+    font-size:
+        0.8rem;
+
+    letter-spacing:
+        4px;
+
+    margin-bottom:
+        10px;
+
+}
+
+.section-title {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(2rem,5vw,3.3rem);
+
+    color:
+        var(--crema);
+
+}
+
+.gold-line {
+
+    width:
+        80px;
+
+    height:
+        2px;
+
+    background:
+        var(--dorado);
+
+    margin:
+        20px auto;
+
+}
+
+.section-description {
+
+    max-width:
+        700px;
+
+    margin:
+        auto;
+
+    font-size:
+        1.15rem;
+
+    color:
+        var(--gris);
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro {
+
+    background:
+        linear-gradient(
+            135deg,
+            #17100d,
+            #291912
+        );
+
+}
+
+.intro-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        60px;
+
+    align-items:
+        center;
+
+}
+
+.intro-image {
+
+    min-height:
+        500px;
+
+    background:
+        url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85");
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+    border:
+        1px solid
+        rgba(199,164,91,0.4);
+
+    box-shadow:
+        var(--sombra);
+
+}
+
+.intro-text h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        2rem;
+
+    color:
+        var(--dorado-claro);
+
+    margin-bottom:
+        20px;
+
+}
+
+.intro-text p {
+
+    font-size:
+        1.15rem;
+
+    color:
+        var(--gris);
+
+    margin-bottom:
+        20px;
+
+}
+
+.ornament {
+
+    color:
+        var(--dorado);
+
+    font-size:
+        2rem;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+/* =========================================================
+   MISIÓN / VISIÓN
+========================================================= */
+
+.mission {
+
+    background:
+        var(--crema-claro);
+
+    color:
+        var(--marron-oscuro);
+
+}
+
+.mission .section-title {
+
+    color:
+        var(--marron-oscuro);
+
+}
+
+.mission .section-description {
+
+    color:
+        #69584b;
+
+}
+
+.mission-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:
+        30px;
+
+}
+
+.mission-card {
+
+    padding:
+        45px 35px;
+
+    border:
+        1px solid
+        rgba(91,56,37,0.3);
+
+    background:
+        #f7edde;
+
+    text-align:
+        center;
+
+    transition:
+        0.4s;
+
+}
+
+.mission-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(45,30,20,0.15);
+
+}
+
+.mission-card i {
+
+    font-size:
+        2.5rem;
+
+    color:
+        var(--marron);
+
+    margin-bottom:
+        20px;
+
+}
+
+.mission-card h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    color:
+        var(--marron);
+
+    margin-bottom:
+        15px;
+
+    font-size:
+        1.5rem;
+
+}
+
+.mission-card p {
+
+    font-size:
+        1.1rem;
+
+}
+
+
+/* =========================================================
+   OBJETIVOS
+========================================================= */
+
+.objectives {
+
+    background:
+
+        linear-gradient(
+            rgba(18,12,9,0.95),
+            rgba(18,12,9,0.95)
+        ),
+
+        url("https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1800&q=80");
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+}
+
+.objective-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        20px;
+
+}
+
+.objective-card {
+
+    padding:
+        35px 25px;
+
+    background:
+        rgba(43,27,20,0.75);
+
+    border:
+        1px solid
+        rgba(199,164,91,0.25);
+
+    transition:
+        0.35s;
+
+}
+
+.objective-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        var(--dorado);
+
+    background:
+        rgba(70,43,28,0.8);
+
+}
+
+.objective-number {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    color:
+        var(--dorado);
+
+    font-size:
+        2.5rem;
+
+}
+
+.objective-card h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    margin:
+        12px 0;
+
+    color:
+        var(--crema);
+
+}
+
+.objective-card p {
+
+    color:
+        var(--gris);
+
+}
+
+
+/* =========================================================
+   VALORES
+========================================================= */
+
+.values {
+
+    background:
+        #0e0b09;
+
+}
+
+.values-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:
+        20px;
+
+}
+
+.value-card {
+
+    text-align:
+        center;
+
+    padding:
+        40px 20px;
+
+    border:
+        1px solid
+        rgba(199,164,91,0.25);
+
+    transition:
+        0.35s;
+
+}
+
+.value-card:hover {
+
+    background:
+        var(--marron-oscuro);
+
+    transform:
+        translateY(-8px);
+
+}
+
+.value-card i {
+
+    font-size:
+        2rem;
+
+    color:
+        var(--dorado);
+
+    margin-bottom:
+        18px;
+
+}
+
+.value-card h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    margin-bottom:
+        10px;
+
+}
+
+.value-card p {
+
+    color:
+        var(--gris);
+
+}
+
+
+/* =========================================================
+   CARTA
+========================================================= */
+
+.menu-section {
+
+    background:
+        linear-gradient(
+            rgba(35,22,16,0.97),
+            rgba(25,16,11,0.98)
+        );
+
+}
+
+.menu-categories {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+
+    margin-bottom:
+        40px;
+
+}
+
+.category-btn {
+
+    padding:
+        11px 20px;
+
+    background:
+        transparent;
+
+    color:
+        var(--crema);
+
+    border:
+        1px solid
+        rgba(199,164,91,0.4);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        0.75rem;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.3s;
+
+}
+
+.category-btn:hover,
+.category-btn.active {
+
+    background:
+        var(--dorado);
+
+    color:
+        var(--negro);
+
+}
+
+.products-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        25px;
+
+}
+
+.product-card {
+
+    background:
+        #1d130e;
+
+    border:
+        1px solid
+        rgba(199,164,91,0.2);
+
+    overflow:
+        hidden;
+
+    transition:
+        0.4s;
+
+}
+
+.product-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        var(--sombra);
+
+    border-color:
+        var(--dorado);
+
+}
+
+.product-image {
+
+    height:
+        230px;
+
+    overflow:
+        hidden;
+
+}
+
+.product-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        0.5s;
+
+}
+
+.product-card:hover
+.product-image img {
+
+    transform:
+        scale(1.08);
+
+}
+
+.product-info {
+
+    padding:
+        22px;
+
+}
+
+.product-info h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    color:
+        var(--crema);
+
+    margin-bottom:
+        8px;
+
+}
+
+.product-info p {
+
+    color:
+        var(--gris);
+
+    font-size:
+        1rem;
+
+    min-height:
+        55px;
+
+}
+
+.product-bottom {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-top:
+        18px;
+
+}
+
+.price {
+
+    color:
+        var(--dorado-claro);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        1.2rem;
+
+    font-weight:
+        700;
+
+}
+
+.add-btn {
+
+    background:
+        var(--dorado);
+
+    border:
+        none;
+
+    color:
+        var(--negro);
+
+    padding:
+        10px 15px;
+
+    cursor:
+        pointer;
+
+    font-weight:
+        bold;
+
+    transition:
+        0.3s;
+
+}
+
+.add-btn:hover {
+
+    background:
+        var(--dorado-claro);
+
+    transform:
+        scale(1.05);
+
+}
 
 
 /* =========================================================
    CARRITO
 ========================================================= */
 
-let cart = [];
+.cart-box {
 
+    position:
+        fixed;
 
-function addToCart(name, price) {
+    right:
+        20px;
 
-    const existing = cart.find(item => item.name === name);
+    bottom:
+        90px;
 
+    width:
+        350px;
 
-    if (existing) {
+    max-width:
+        calc(100% - 40px);
 
-        existing.quantity++;
+    background:
+        #21150f;
 
-    } else {
+    border:
+        1px solid
+        var(--dorado);
 
-        cart.push({
+    box-shadow:
+        var(--sombra);
 
-            name: name,
-            price: price,
-            quantity: 1
+    z-index:
+        900;
 
-        });
+    transform:
+        translateY(120%);
 
-    }
+    opacity:
+        0;
 
+    pointer-events:
+        none;
 
-    updateCart();
+    transition:
+        0.4s;
 
-    document.getElementById("cartBox").classList.add("show");
+}
+
+.cart-box.show {
+
+    transform:
+        translateY(0);
+
+    opacity:
+        1;
+
+    pointer-events:
+        auto;
+
+}
+
+.cart-header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    padding:
+        18px;
+
+    background:
+        var(--marron-oscuro);
+
+    border-bottom:
+        1px solid
+        rgba(199,164,91,0.3);
+
+}
+
+.cart-header h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    color:
+        var(--dorado);
+
+}
+
+.close-cart {
+
+    background:
+        none;
+
+    border:
+        none;
+
+    color:
+        var(--crema);
+
+    cursor:
+        pointer;
+
+    font-size:
+        1.2rem;
+
+}
+
+.cart-items {
+
+    max-height:
+        300px;
+
+    overflow-y:
+        auto;
+
+    padding:
+        15px;
+
+}
+
+.cart-item {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        10px;
+
+    padding:
+        12px 0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+.cart-item-name {
+
+    font-weight:
+        600;
+
+}
+
+.cart-item-price {
+
+    color:
+        var(--dorado);
+
+}
+
+.cart-item-controls {
+
+    display:
+        flex;
+
+    gap:
+        5px;
+
+    align-items:
+        center;
+
+}
+
+.cart-item-controls button {
+
+    width:
+        25px;
+
+    height:
+        25px;
+
+    border:
+        none;
+
+    background:
+        var(--marron);
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+}
+
+.cart-total {
+
+    padding:
+        18px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    border-top:
+        1px solid
+        rgba(199,164,91,0.3);
+
+}
+
+.cart-total strong {
+
+    color:
+        var(--dorado-claro);
+
+}
+
+.cart-actions {
+
+    padding:
+        15px;
+
+}
+
+.cart-actions button {
+
+    width:
+        100%;
+
+    border:
+        none;
+
+    padding:
+        13px;
+
+    background:
+        #25D366;
+
+    color:
+        white;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+
+}
+
+.empty-cart {
+
+    text-align:
+        center;
+
+    color:
+        var(--gris);
+
+    padding:
+        30px 10px;
+
+}
+
+.cart-floating {
+
+    position:
+        fixed;
+
+    right:
+        25px;
+
+    bottom:
+        25px;
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--dorado);
+
+    color:
+        var(--negro);
+
+    border:
+        none;
+
+    font-size:
+        1.3rem;
+
+    cursor:
+        pointer;
+
+    z-index:
+        1000;
+
+    box-shadow:
+        0 5px 25px
+        rgba(0,0,0,0.5);
+
+    transition:
+        0.3s;
+
+}
+
+.cart-floating:hover {
+
+    transform:
+        scale(1.1);
+
+}
+
+.cart-count {
+
+    position:
+        absolute;
+
+    top:
+        -5px;
+
+    right:
+        -5px;
+
+    width:
+        22px;
+
+    height:
+        22px;
+
+    border-radius:
+        50%;
+
+    background:
+        #b7352c;
+
+    color:
+        white;
+
+    font-size:
+        0.75rem;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
 
 }
 
 
 /* =========================================================
-   ACTUALIZAR CARRITO
+   GALERÍA
 ========================================================= */
 
-function updateCart() {
+.gallery {
 
-    const cartItems = document.getElementById("cartItems");
-
-    const cartTotal = document.getElementById("cartTotal");
-
-    const cartCount = document.getElementById("cartCount");
-
-
-    if (cart.length === 0) {
-
-        cartItems.innerHTML = `
-            <div class="empty-cart">
-                Tu pedido está vacío.
-            </div>
-        `;
-
-        cartTotal.textContent = "S/ 0.00";
-
-        cartCount.textContent = "0";
-
-        return;
-
-    }
-
-
-    let total = 0;
-
-    let count = 0;
-
-
-    cartItems.innerHTML = "";
-
-
-    cart.forEach((item, index) => {
-
-        const subtotal = item.price * item.quantity;
-
-        total += subtotal;
-
-        count += item.quantity;
-
-
-        const div = document.createElement("div");
-
-        div.className = "cart-item";
-
-
-        div.innerHTML = `
-
-            <div>
-
-                <div class="cart-item-name">
-                    ${item.name}
-                </div>
-
-                <div class="cart-item-price">
-                    S/ ${subtotal.toFixed(2)}
-                </div>
-
-            </div>
-
-
-            <div class="cart-item-controls">
-
-                <button onclick="changeQuantity(${index}, -1)">
-                    −
-                </button>
-
-                <span>
-                    ${item.quantity}
-                </span>
-
-                <button onclick="changeQuantity(${index}, 1)">
-                    +
-                </button>
-
-            </div>
-
-        `;
-
-
-        cartItems.appendChild(div);
-
-    });
-
-
-    cartTotal.textContent = "S/ " + total.toFixed(2);
-
-    cartCount.textContent = count;
+    background:
+        var(--crema-claro);
 
 }
 
+.gallery .section-title {
 
-/* =========================================================
-   CAMBIAR CANTIDAD
-========================================================= */
-
-function changeQuantity(index, amount) {
-
-    cart[index].quantity += amount;
-
-
-    if (cart[index].quantity <= 0) {
-
-        cart.splice(index, 1);
-
-    }
-
-
-    updateCart();
+    color:
+        var(--marron-oscuro);
 
 }
 
+.gallery-grid {
 
-/* =========================================================
-   ABRIR / CERRAR CARRITO
-========================================================= */
+    display:
+        grid;
 
-function toggleCart() {
+    grid-template-columns:
+        repeat(4,1fr);
 
-    document
-        .getElementById("cartBox")
-        .classList
-        .toggle("show");
+    grid-auto-rows:
+        230px;
 
-}
-
-
-/* =========================================================
-   ENVIAR PEDIDO A WHATSAPP
-========================================================= */
-
-function sendWhatsApp() {
-
-    if (cart.length === 0) {
-
-        alert("Agrega al menos un producto a tu pedido.");
-
-        return;
-
-    }
-
-
-    let message =
-        "☕ *PEDIDO - CAFETERÍA KUSIY*%0A%0A";
-
-
-    let total = 0;
-
-
-    cart.forEach(item => {
-
-        const subtotal =
-            item.price * item.quantity;
-
-
-        total += subtotal;
-
-
-        message +=
-            "• " +
-            item.name +
-            " x" +
-            item.quantity +
-            " — S/ " +
-            subtotal.toFixed(2) +
-            "%0A";
-
-    });
-
-
-    message +=
-        "%0A💰 *TOTAL: S/ " +
-        total.toFixed(2) +
-        "*";
-
-
-    message +=
-        "%0A%0AHola, quisiera realizar este pedido. 😊";
-
-
-    const whatsapp =
-        "https://wa.me/51962130192?text=" +
-        message;
-
-
-    window.open(whatsapp, "_blank");
+    gap:
+        12px;
 
 }
 
+.gallery-item {
 
-/* =========================================================
-   FILTRO DE CATEGORÍAS
-========================================================= */
+    overflow:
+        hidden;
 
-const categoryButtons =
-    document.querySelectorAll(".category-btn");
+    position:
+        relative;
 
+}
 
-const products =
-    document.querySelectorAll(".product-card");
+.gallery-item.large {
 
+    grid-column:
+        span 2;
 
-categoryButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-
-        categoryButtons.forEach(btn => {
-
-            btn.classList.remove("active");
-
-        });
-
-
-        button.classList.add("active");
-
-
-        const category =
-            button.dataset.category;
-
-
-        products.forEach(product => {
-
-            if (
-                category === "todos" ||
-                product.dataset.category === category
-            ) {
-
-                product.style.display = "block";
-
-            } else {
-
-                product.style.display = "none";
-
-            }
-
-        });
-
-    });
-
-});
-
-
-/* =========================================================
-   ANIMACIONES AL HACER SCROLL
-========================================================= */
-
-const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-const observer =
-    new IntersectionObserver(
-
-        entries => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("visible");
-
-                }
-
-            });
-
-        },
-
-        {
-            threshold: 0.12
-        }
-
-    );
-
-
-revealElements.forEach(element => {
-
-    observer.observe(element);
-
-});
-
-
-/* =========================================================
-   BOTÓN VOLVER ARRIBA
-========================================================= */
-
-const topBtn =
-    document.getElementById("topBtn");
-
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 500) {
-
-        topBtn.classList.add("show");
-
-    } else {
-
-        topBtn.classList.remove("show");
-
-    }
-
-});
-
-
-/* =========================================================
-   CERRAR CARRITO CON ESC
-========================================================= */
-
-document.addEventListener("keydown", event => {
-
-    if (event.key === "Escape") {
-
-        document
-            .getElementById("cartBox")
-            .classList
-            .remove("show");
-
-    }
-
-});
-
-
-</script>
-
-
-</body>
-</html>
+    g
