@@ -1,95 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <meta name="description"
-        content="Cafetería Kusiy: disfruta cafés, bebidas, postres y productos de panadería en un ambiente cálido y elegante. Realiza tus pedidos y solicita delivery por WhatsApp.">
+    <meta name="description" content="Cafetería Kusiy - El arte de disfrutar un buen café. Cafés, bebidas, postres, panadería y delivery en Cusco.">
 
-    <meta name="keywords"
-        content="Cafetería Kusiy, Kusiy, cafetería Cusco, café Cusco, cafés, cappuccino, latte, postres, delivery Cusco">
+    <meta name="keywords" content="Cafetería Kusiy, cafetería Cusco, café Cusco, postres Cusco, delivery Cusco, café artesanal">
 
     <meta name="author" content="Cafetería Kusiy">
 
-    <!-- VERIFICACIÓN GOOGLE SEARCH CONSOLE -->
+    <!-- VERIFICACIÓN DE GOOGLE SEARCH CONSOLE -->
     <meta name="google-site-verification" content="LsuQU8q7nzLSirQDD7kK4hURobtdAPHl5pYxCP4qNYk" />
 
-    <!-- ICONO -->
-    <link rel="icon"
-        href="https://cdn-icons-png.flaticon.com/512/924/924514.png">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/924/924514.png">
 
-    <!-- TÍTULO QUE GOOGLE PUEDE MOSTRAR -->
     <title>Cafetería Kusiy | El arte de disfrutar un buen café</title>
 
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-
-    <!-- FONT AWESOME -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
-/* =========================================================
-   VARIABLES
-========================================================= */
-
-:root {
-
-    --negro: #100d0b;
-    --negro-suave: #191411;
-
-    --marron-oscuro: #2b1b14;
-    --marron: #5b3825;
-    --marron-claro: #8b5e3c;
-
-    --crema: #f1e4cf;
-    --crema-claro: #faf5ec;
-
-    --dorado: #c7a45b;
-    --dorado-claro: #e2c47a;
-
-    --blanco: #ffffff;
-    --gris: #c9c0b5;
-
-    --sombra:
-        0 15px 45px rgba(0,0,0,0.35);
-}
-
-
-/* =========================================================
-   GENERAL
-========================================================= */
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
 
 * {
-
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-
-    scroll-behavior: smooth;
-
 }
 
 html {
@@ -97,1670 +44,1154 @@ html {
 }
 
 body {
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    background:
-        var(--negro);
-
-    color:
-        var(--crema);
-
-    line-height:
-        1.6;
-
-    overflow-x:
-        hidden;
-
+    font-family: "Cormorant Garamond", serif;
+    background: #120d0a;
+    color: #f4ead8;
+    line-height: 1.6;
 }
 
 a {
-
-    text-decoration:
-        none;
-
-    color:
-        inherit;
-
-}
-
-button {
-
-    font-family:
-        inherit;
-
+    text-decoration: none;
+    color: inherit;
 }
 
 img {
-
-    max-width:
-        100%;
-
-    display:
-        block;
-
+    max-width: 100%;
+    display: block;
 }
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-header {
-
-    position:
-        fixed;
-
-    top:
-        0;
-
-    left:
-        0;
-
-    width:
-        100%;
-
-    z-index:
-        1000;
-
-    background:
-        rgba(16,13,11,0.95);
-
-    backdrop-filter:
-        blur(10px);
-
-    border-bottom:
-        1px solid
-        rgba(199,164,91,0.25);
-
-}
-
-.nav-container {
-
-    max-width:
-        1250px;
-
-    margin:
-        auto;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        space-between;
-
-    padding:
-        16px 25px;
-
-}
-
-.logo {
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    color:
-        var(--dorado);
-
-    font-size:
-        1.65rem;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        4px;
-
-}
-
-.logo span {
-
-    display:
-        block;
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size:
-        0.75rem;
-
-    letter-spacing:
-        3px;
-
-    text-align:
-        center;
-
-    color:
-        var(--crema);
-
-}
-
-nav ul {
-
-    display:
-        flex;
-
-    list-style:
-        none;
-
-    gap:
-        27px;
-
-}
-
-nav a {
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        0.78rem;
-
-    letter-spacing:
-        1px;
-
-    color:
-        var(--crema);
-
-    transition:
-        0.3s;
-
-}
-
-nav a:hover {
-
-    color:
-        var(--dorado-claro);
-
-}
-
-.menu-btn {
-
-    display:
-        none;
-
-    background:
-        none;
-
-    border:
-        none;
-
-    color:
-        var(--crema);
-
-    font-size:
-        1.5rem;
-
-    cursor:
-        pointer;
-
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero {
-
-    min-height:
-        100vh;
-
-    position:
-        relative;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    text-align:
-        center;
-
-    background:
-
-        linear-gradient(
-            rgba(10,7,5,0.62),
-            rgba(10,7,5,0.82)
-        ),
-
-        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=2000&q=85");
-
-    background-size:
-        cover;
-
-    background-position:
-        center;
-
-    background-attachment:
-        fixed;
-
-}
-
-.hero::after {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    inset:
-        0;
-
-    background:
-        radial-gradient(
-            circle at center,
-            transparent 20%,
-            rgba(0,0,0,0.65) 100%
-        );
-
-}
-
-.hero-content {
-
-    position:
-        relative;
-
-    z-index:
-        2;
-
-    max-width:
-        900px;
-
-    padding:
-        30px;
-
-}
-
-.hero-small {
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    letter-spacing:
-        6px;
-
-    color:
-        var(--dorado-claro);
-
-    font-size:
-        0.9rem;
-
-    margin-bottom:
-        15px;
-
-}
-
-.hero h1 {
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        clamp(4rem,12vw,9rem);
-
-    line-height:
-        0.9;
-
-    letter-spacing:
-        15px;
-
-    color:
-        var(--crema);
-
-    text-shadow:
-        0 5px 30px
-        rgba(0,0,0,0.8);
-
-}
-
-.hero h2 {
-
-    font-size:
-        clamp(1.5rem,3vw,2.5rem);
-
-    font-weight:
-        400;
-
-    color:
-        var(--dorado-claro);
-
-    margin:
-        25px 0 15px;
-
-}
-
-.hero p {
-
-    font-size:
-        1.25rem;
-
-    max-width:
-        650px;
-
-    margin:
-        auto;
-
-    color:
-        var(--crema);
-
-}
-
-.hero-buttons {
-
-    margin-top:
-        35px;
-
-    display:
-        flex;
-
-    justify-content:
-        center;
-
-    gap:
-        15px;
-
-    flex-wrap:
-        wrap;
-
-}
-
-.btn {
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    gap:
-        9px;
-
-    padding:
-        13px 25px;
-
-    border:
-        1px solid
-        var(--dorado);
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        0.8rem;
-
-    letter-spacing:
-        1px;
-
-    transition:
-        0.3s;
-
-    cursor:
-        pointer;
-
-}
-
-.btn-primary {
-
-    background:
-        var(--dorado);
-
-    color:
-        var(--negro);
-
-}
-
-.btn-primary:hover {
-
-    background:
-        var(--dorado-claro);
-
-    transform:
-        translateY(-3px);
-
-}
-
-.btn-outline {
-
-    background:
-        transparent;
-
-    color:
-        var(--crema);
-
-}
-
-.btn-outline:hover {
-
-    background:
-        var(--dorado);
-
-    color:
-        var(--negro);
-
-    transform:
-        translateY(-3px);
-
-}
-
-.scroll-down {
-
-    position:
-        absolute;
-
-    bottom:
-        30px;
-
-    left:
-        50%;
-
-    transform:
-        translateX(-50%);
-
-    z-index:
-        3;
-
-    color:
-        var(--dorado);
-
-    font-size:
-        1.5rem;
-
-    animation:
-        bajar 1.7s infinite;
-
-}
-
-@keyframes bajar {
-
-    0%,100% {
-        transform:
-            translate(-50%,0);
-    }
-
-    50% {
-        transform:
-            translate(-50%,10px);
-    }
-
-}
-
-
-/* =========================================================
-   SECCIONES
-========================================================= */
 
 section {
+    padding: 90px 7%;
+}
 
-    padding:
-        100px 25px;
-
+h1,
+h2,
+h3,
+h4,
+.logo {
+    font-family: "Cinzel", serif;
 }
 
 .container {
-
-    max-width:
-        1150px;
-
-    margin:
-        auto;
-
+    max-width: 1200px;
+    margin: auto;
 }
 
-.section-header {
+/* =========================
+   NAVBAR
+========================= */
 
-    text-align:
-        center;
-
-    margin-bottom:
-        60px;
-
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(15, 10, 7, 0.96);
+    border-bottom: 1px solid rgba(210, 166, 92, 0.3);
 }
 
-.section-subtitle {
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 75px;
+    padding: 0 25px;
 
-    font-family:
-        "Cinzel",
-        serif;
-
-    color:
-        var(--dorado);
-
-    font-size:
-        0.8rem;
-
-    letter-spacing:
-        4px;
-
-    margin-bottom:
-        10px;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.logo {
+    font-size: 25px;
+    letter-spacing: 3px;
+    color: #d6ae62;
+}
+
+.logo span {
+    color: #f3e5c8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: "Cinzel", serif;
+    font-size: 13px;
+    color: #f4ead8;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d6ae62;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 25px;
+    color: #d6ae62;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(10, 6, 4, 0.67), rgba(10, 6, 4, 0.83)),
+        url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=85")
+        center/cover fixed;
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 120px);
+    letter-spacing: 15px;
+    color: #d8b36b;
+    text-shadow: 0 5px 20px #000;
+}
+
+.hero h2 {
+    font-size: clamp(20px, 3vw, 32px);
+    margin-top: -5px;
+    color: #f5ead6;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 25px auto;
+    max-width: 650px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 27px;
+    margin: 8px;
+    border: 1px solid #d6ae62;
+    background: #d6ae62;
+    color: #17100c;
+    font-family: "Cinzel", serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #d6ae62;
+}
+
+/* =========================
+   TITULOS
+========================= */
 
 .section-title {
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        clamp(2rem,5vw,3.3rem);
-
-    color:
-        var(--crema);
-
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.gold-line {
-
-    width:
-        80px;
-
-    height:
-        2px;
-
-    background:
-        var(--dorado);
-
-    margin:
-        20px auto;
-
+.section-title h2 {
+    font-size: 38px;
+    color: #d6ae62;
 }
 
-.section-description {
-
-    max-width:
-        700px;
-
-    margin:
-        auto;
-
-    font-size:
-        1.15rem;
-
-    color:
-        var(--gris);
-
+.section-title p {
+    font-size: 19px;
+    color: #cbbda7;
 }
 
+/* =========================
+   NOSOTROS
+========================= */
 
-/* =========================================================
-   INTRO
-========================================================= */
-
-.intro {
-
-    background:
-        linear-gradient(
-            135deg,
-            #17100d,
-            #291912
-        );
-
+.about {
+    background: #1a110d;
 }
 
-.intro-grid {
+.about-grid {
+    max-width: 1100px;
+    margin: auto;
 
-    display:
-        grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:
-        60px;
-
-    align-items:
-        center;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
 }
 
-.intro-image {
-
-    min-height:
-        500px;
-
-    background:
-        url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85");
-
-    background-size:
-        cover;
-
-    background-position:
-        center;
-
-    border:
-        1px solid
-        rgba(199,164,91,0.4);
-
-    box-shadow:
-        var(--sombra);
-
+.about-card {
+    background: #251812;
+    padding: 35px;
+    border: 1px solid rgba(214, 174, 98, 0.25);
 }
 
-.intro-text h3 {
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        2rem;
-
-    color:
-        var(--dorado-claro);
-
-    margin-bottom:
-        20px;
-
+.about-card h3 {
+    color: #d6ae62;
+    margin-bottom: 15px;
+    font-size: 25px;
 }
 
-.intro-text p {
-
-    font-size:
-        1.15rem;
-
-    color:
-        var(--gris);
-
-    margin-bottom:
-        20px;
-
+.about-card p {
+    color: #ded1bb;
+    font-size: 18px;
 }
 
-.ornament {
-
-    color:
-        var(--dorado);
-
-    font-size:
-        2rem;
-
-    margin-bottom:
-        15px;
-
-}
-
-
-/* =========================================================
-   MISIÓN / VISIÓN
-========================================================= */
-
-.mission {
-
-    background:
-        var(--crema-claro);
-
-    color:
-        var(--marron-oscuro);
-
-}
-
-.mission .section-title {
-
-    color:
-        var(--marron-oscuro);
-
-}
-
-.mission .section-description {
-
-    color:
-        #69584b;
-
-}
-
-.mission-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap:
-        30px;
-
-}
-
-.mission-card {
-
-    padding:
-        45px 35px;
-
-    border:
-        1px solid
-        rgba(91,56,37,0.3);
-
-    background:
-        #f7edde;
-
-    text-align:
-        center;
-
-    transition:
-        0.4s;
-
-}
-
-.mission-card:hover {
-
-    transform:
-        translateY(-8px);
-
-    box-shadow:
-        0 15px 40px
-        rgba(45,30,20,0.15);
-
-}
-
-.mission-card i {
-
-    font-size:
-        2.5rem;
-
-    color:
-        var(--marron);
-
-    margin-bottom:
-        20px;
-
-}
-
-.mission-card h3 {
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    color:
-        var(--marron);
-
-    margin-bottom:
-        15px;
-
-    font-size:
-        1.5rem;
-
-}
-
-.mission-card p {
-
-    font-size:
-        1.1rem;
-
-}
-
-
-/* =========================================================
+/* =========================
    OBJETIVOS
-========================================================= */
+========================= */
 
 .objectives {
-
-    background:
-
-        linear-gradient(
-            rgba(18,12,9,0.95),
-            rgba(18,12,9,0.95)
-        ),
-
-        url("https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1800&q=80");
-
-    background-size:
-        cover;
-
-    background-position:
-        center;
-
+    background: #100b08;
 }
 
-.objective-grid {
+.objectives-grid {
+    max-width: 1100px;
+    margin: auto;
 
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:
-        20px;
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.objective-card {
-
-    padding:
-        35px 25px;
-
-    background:
-        rgba(43,27,20,0.75);
-
-    border:
-        1px solid
-        rgba(199,164,91,0.25);
-
-    transition:
-        0.35s;
-
+.objective {
+    padding: 30px;
+    text-align: center;
+    background: #21150f;
+    border-top: 2px solid #d6ae62;
+    transition: 0.3s;
 }
 
-.objective-card:hover {
-
-    transform:
-        translateY(-7px);
-
-    border-color:
-        var(--dorado);
-
-    background:
-        rgba(70,43,28,0.8);
-
+.objective:hover {
+    transform: translateY(-7px);
 }
 
-.objective-number {
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    color:
-        var(--dorado);
-
-    font-size:
-        2.5rem;
-
+.objective i {
+    font-size: 32px;
+    color: #d6ae62;
+    margin-bottom: 15px;
 }
 
-.objective-card h3 {
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    margin:
-        12px 0;
-
-    color:
-        var(--crema);
-
+.objective h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.objective-card p {
-
-    color:
-        var(--gris);
-
+.objective p {
+    color: #cfc0a9;
 }
 
-
-/* =========================================================
+/* =========================
    VALORES
-========================================================= */
+========================= */
 
 .values {
-
     background:
-        #0e0b09;
-
+        linear-gradient(rgba(18, 11, 7, 0.9), rgba(18, 11, 7, 0.94)),
+        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
 }
 
 .values-grid {
+    max-width: 1000px;
+    margin: auto;
 
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:
-        20px;
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.value-card {
-
-    text-align:
-        center;
-
-    padding:
-        40px 20px;
-
-    border:
-        1px solid
-        rgba(199,164,91,0.25);
-
-    transition:
-        0.35s;
-
+.value {
+    text-align: center;
+    padding: 30px 15px;
 }
 
-.value-card:hover {
-
-    background:
-        var(--marron-oscuro);
-
-    transform:
-        translateY(-8px);
-
+.value i {
+    font-size: 35px;
+    color: #d6ae62;
+    margin-bottom: 12px;
 }
 
-.value-card i {
-
-    font-size:
-        2rem;
-
-    color:
-        var(--dorado);
-
-    margin-bottom:
-        18px;
-
+.value h3 {
+    color: #fff0d1;
 }
 
-.value-card h3 {
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    margin-bottom:
-        10px;
-
-}
-
-.value-card p {
-
-    color:
-        var(--gris);
-
-}
-
-
-/* =========================================================
+/* =========================
    CARTA
-========================================================= */
+========================= */
 
-.menu-section {
-
-    background:
-        linear-gradient(
-            rgba(35,22,16,0.97),
-            rgba(25,16,11,0.98)
-        );
-
+.menu {
+    background: #17100c;
 }
 
-.menu-categories {
-
-    display:
-        flex;
-
-    justify-content:
-        center;
-
-    flex-wrap:
-        wrap;
-
-    gap:
-        10px;
-
-    margin-bottom:
-        40px;
-
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
 }
 
-.category-btn {
-
-    padding:
-        11px 20px;
-
-    background:
-        transparent;
-
-    color:
-        var(--crema);
-
-    border:
-        1px solid
-        rgba(199,164,91,0.4);
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        0.75rem;
-
-    cursor:
-        pointer;
-
-    transition:
-        0.3s;
-
+.category {
+    cursor: pointer;
+    padding: 10px 18px;
+    border: 1px solid #8e6b38;
+    background: transparent;
+    color: #eadfc9;
+    font-family: "Cinzel", serif;
 }
 
-.category-btn:hover,
-.category-btn.active {
-
-    background:
-        var(--dorado);
-
-    color:
-        var(--negro);
-
+.category.active,
+.category:hover {
+    background: #d6ae62;
+    color: #17100c;
 }
 
-.products-grid {
+.products {
+    max-width: 1200px;
+    margin: auto;
 
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:
-        25px;
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
 }
 
-.product-card {
-
-    background:
-        #1d130e;
-
-    border:
-        1px solid
-        rgba(199,164,91,0.2);
-
-    overflow:
-        hidden;
-
-    transition:
-        0.4s;
-
+.product {
+    background: #251812;
+    border: 1px solid rgba(214, 174, 98, 0.2);
+    overflow: hidden;
+    transition: 0.3s;
 }
 
-.product-card:hover {
-
-    transform:
-        translateY(-8px);
-
-    box-shadow:
-        var(--sombra);
-
-    border-color:
-        var(--dorado);
-
+.product:hover {
+    transform: translateY(-5px);
+    border-color: #d6ae62;
 }
 
-.product-image {
-
-    height:
-        230px;
-
-    overflow:
-        hidden;
-
-}
-
-.product-image img {
-
-    width:
-        100%;
-
-    height:
-        100%;
-
-    object-fit:
-        cover;
-
-    transition:
-        0.5s;
-
-}
-
-.product-card:hover
-.product-image img {
-
-    transform:
-        scale(1.08);
-
+.product-img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
 }
 
 .product-info {
-
-    padding:
-        22px;
-
+    padding: 20px;
 }
 
 .product-info h3 {
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    color:
-        var(--crema);
-
-    margin-bottom:
-        8px;
-
+    font-size: 19px;
+    color: #f5e5c6;
 }
 
 .product-info p {
-
-    color:
-        var(--gris);
-
-    font-size:
-        1rem;
-
-    min-height:
-        55px;
-
-}
-
-.product-bottom {
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    align-items:
-        center;
-
-    margin-top:
-        18px;
-
+    color: #bfb09a;
+    min-height: 48px;
 }
 
 .price {
-
-    color:
-        var(--dorado-claro);
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        1.2rem;
-
-    font-weight:
-        700;
-
+    display: block;
+    margin: 10px 0;
+    font-family: "Cinzel", serif;
+    font-size: 19px;
+    color: #d6ae62;
 }
 
-.add-btn {
+.add-cart {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
 
-    background:
-        var(--dorado);
+    background: #d6ae62;
+    color: #17100c;
 
-    border:
-        none;
-
-    color:
-        var(--negro);
-
-    padding:
-        10px 15px;
-
-    cursor:
-        pointer;
-
-    font-weight:
-        bold;
-
-    transition:
-        0.3s;
-
+    font-family: "Cinzel", serif;
+    font-weight: bold;
 }
 
-.add-btn:hover {
-
-    background:
-        var(--dorado-claro);
-
-    transform:
-        scale(1.05);
-
+.add-cart:hover {
+    background: #f0d398;
 }
 
-
-/* =========================================================
-   CARRITO
-========================================================= */
-
-.cart-box {
-
-    position:
-        fixed;
-
-    right:
-        20px;
-
-    bottom:
-        90px;
-
-    width:
-        350px;
-
-    max-width:
-        calc(100% - 40px);
-
-    background:
-        #21150f;
-
-    border:
-        1px solid
-        var(--dorado);
-
-    box-shadow:
-        var(--sombra);
-
-    z-index:
-        900;
-
-    transform:
-        translateY(120%);
-
-    opacity:
-        0;
-
-    pointer-events:
-        none;
-
-    transition:
-        0.4s;
-
-}
-
-.cart-box.show {
-
-    transform:
-        translateY(0);
-
-    opacity:
-        1;
-
-    pointer-events:
-        auto;
-
-}
-
-.cart-header {
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    align-items:
-        center;
-
-    padding:
-        18px;
-
-    background:
-        var(--marron-oscuro);
-
-    border-bottom:
-        1px solid
-        rgba(199,164,91,0.3);
-
-}
-
-.cart-header h3 {
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    color:
-        var(--dorado);
-
-}
-
-.close-cart {
-
-    background:
-        none;
-
-    border:
-        none;
-
-    color:
-        var(--crema);
-
-    cursor:
-        pointer;
-
-    font-size:
-        1.2rem;
-
-}
-
-.cart-items {
-
-    max-height:
-        300px;
-
-    overflow-y:
-        auto;
-
-    padding:
-        15px;
-
-}
-
-.cart-item {
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    gap:
-        10px;
-
-    padding:
-        12px 0;
-
-    border-bottom:
-        1px solid
-        rgba(255,255,255,0.08);
-
-}
-
-.cart-item-name {
-
-    font-weight:
-        600;
-
-}
-
-.cart-item-price {
-
-    color:
-        var(--dorado);
-
-}
-
-.cart-item-controls {
-
-    display:
-        flex;
-
-    gap:
-        5px;
-
-    align-items:
-        center;
-
-}
-
-.cart-item-controls button {
-
-    width:
-        25px;
-
-    height:
-        25px;
-
-    border:
-        none;
-
-    background:
-        var(--marron);
-
-    color:
-        white;
-
-    cursor:
-        pointer;
-
-}
-
-.cart-total {
-
-    padding:
-        18px;
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    border-top:
-        1px solid
-        rgba(199,164,91,0.3);
-
-}
-
-.cart-total strong {
-
-    color:
-        var(--dorado-claro);
-
-}
-
-.cart-actions {
-
-    padding:
-        15px;
-
-}
-
-.cart-actions button {
-
-    width:
-        100%;
-
-    border:
-        none;
-
-    padding:
-        13px;
-
-    background:
-        #25D366;
-
-    color:
-        white;
-
-    font-weight:
-        bold;
-
-    cursor:
-        pointer;
-
-}
-
-.empty-cart {
-
-    text-align:
-        center;
-
-    color:
-        var(--gris);
-
-    padding:
-        30px 10px;
-
-}
-
-.cart-floating {
-
-    position:
-        fixed;
-
-    right:
-        25px;
-
-    bottom:
-        25px;
-
-    width:
-        58px;
-
-    height:
-        58px;
-
-    border-radius:
-        50%;
-
-    background:
-        var(--dorado);
-
-    color:
-        var(--negro);
-
-    border:
-        none;
-
-    font-size:
-        1.3rem;
-
-    cursor:
-        pointer;
-
-    z-index:
-        1000;
-
-    box-shadow:
-        0 5px 25px
-        rgba(0,0,0,0.5);
-
-    transition:
-        0.3s;
-
-}
-
-.cart-floating:hover {
-
-    transform:
-        scale(1.1);
-
-}
-
-.cart-count {
-
-    position:
-        absolute;
-
-    top:
-        -5px;
-
-    right:
-        -5px;
-
-    width:
-        22px;
-
-    height:
-        22px;
-
-    border-radius:
-        50%;
-
-    background:
-        #b7352c;
-
-    color:
-        white;
-
-    font-size:
-        0.75rem;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-}
-
-
-/* =========================================================
+/* =========================
    GALERÍA
-========================================================= */
+========================= */
 
 .gallery {
-
-    background:
-        var(--crema-claro);
-
-}
-
-.gallery .section-title {
-
-    color:
-        var(--marron-oscuro);
-
+    background: #0e0907;
 }
 
 .gallery-grid {
+    max-width: 1200px;
+    margin: auto;
 
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    grid-auto-rows:
-        230px;
-
-    gap:
-        12px;
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
 
-.gallery-item {
-
-    overflow:
-        hidden;
-
-    position:
-        relative;
-
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.4s;
 }
 
-.gallery-item.large {
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
 
-    grid-column:
-        span 2;
+/* =========================
+   TESTIMONIOS
+========================= */
 
-    g
+.testimonials {
+    background: #1c120d;
+}
+
+.testimonial-grid {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.testimonial {
+    background: #261811;
+    padding: 30px;
+    border-left: 3px solid #d6ae62;
+}
+
+.testimonial p {
+    font-size: 18px;
+    font-style: italic;
+    color: #dfd2bc;
+}
+
+.stars {
+    color: #d6ae62;
+    margin-top: 15px;
+}
+
+/* =========================
+   DELIVERY
+========================= */
+
+.delivery {
+    background:
+        linear-gradient(rgba(15, 8, 5, 0.88), rgba(15, 8, 5, 0.94)),
+        url("https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    text-align: center;
+}
+
+.delivery-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.delivery h2 {
+    color: #d6ae62;
+    font-size: 40px;
+}
+
+.delivery p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact {
+    background: #110b08;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-item i {
+    color: #d6ae62;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.contact-item p {
+    color: #d4c5ad;
+}
+
+/* =========================
+   CARRITO
+========================= */
+
+.cart-panel {
+    position: fixed;
+    right: -400px;
+    top: 0;
+
+    width: 370px;
+    max-width: 90%;
+    height: 100vh;
+
+    background: #1c120e;
+    z-index: 2000;
+
+    padding: 25px;
+
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+
+    transition: 0.4s;
+
+    overflow-y: auto;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #5e4828;
+    padding-bottom: 15px;
+}
+
+.cart-header h2 {
+    color: #d6ae62;
+}
+
+.close-cart {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px 0;
+    border-bottom: 1px solid #443329;
+}
+
+.cart-item h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity button {
+    width: 25px;
+    height: 25px;
+
+    border: none;
+    cursor: pointer;
+
+    background: #d6ae62;
+    color: #17100c;
+}
+
+.cart-total {
+    margin-top: 25px;
+    font-family: "Cinzel", serif;
+    font-size: 21px;
+    color: #d6ae62;
+}
+
+.whatsapp-order {
+    display: block;
+    margin-top: 20px;
+
+    padding: 14px;
+
+    text-align: center;
+
+    background: #25d366;
+    color: white;
+
+    font-family: "Cinzel", serif;
+}
+
+/* =========================
+   BOTONES FLOTANTES
+========================= */
+
+.whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #25d366;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    z-index: 1000;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.cart-button {
+    position: fixed;
+    right: 22px;
+    bottom: 95px;
+
+    width: 58px;
+    height: 58px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #d6ae62;
+    color: #17100c;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+}
+
+.cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: #9c1c1c;
+    color: white;
+
+    font-size: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 7%;
+    background: #090604;
+    text-align: center;
+
+    border-top: 1px solid rgba(214,174,98,0.2);
+}
+
+footer .logo {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #958878;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .objectives-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+
+    section {
+        padding: 70px 5%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        background: #120d0a;
+
+        display: none;
+        flex-direction: column;
+
+        padding: 20px;
+
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .about-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        letter-spacing: 8px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .objectives-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        height: 220px;
+    }
+
+    .cart-panel {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVEGACIÓN
+========================= -->
+
+<header>
+
+<nav class="navbar">
+
+    <a href="#inicio" class="logo">
+        KUSIY<span>.</span>
+    </a>
+
+    <div class="menu-btn" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#valores">Valores</a></li>
+        <li><a href="#carta">Carta</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#delivery">Delivery</a></li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     INICIO
+========================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <h1>KUSIY</h1>
+
+        <h2>El arte de disfrutar un buen café</h2>
+
+        <p>
+            Un espacio donde el aroma del café,
+            la tradición y los buenos momentos se encuentran.
+        </p>
+
+        <a href="#carta" class="btn">
+            Ver nuestra carta
+        </a>
+
+        <a href="https://wa.me/51962130192?text=Hola%20Cafeter%C3%ADa%20Kusiy%2C%20quisiera%20realizar%20un%20pedido."
+           class="btn"
+           target="_blank">
+            Pedir por WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NOSOTROS
+========================= -->
+
+<section class="about" id="nosotros">
+
+    <div class="section-title">
+
+        <h2>Sobre Kusiy</h2>
+
+        <p>
+            Más que una cafetería, una experiencia.
+        </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-card">
+
+            <h3>Nuestra misión</h3>
+
+            <p>
+                Brindar una experiencia cálida y memorable
+                a nuestros clientes mediante cafés, bebidas,
+                postres y productos de calidad, acompañados
+                de una atención cercana y personalizada.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <h3>Nuestra visión</h3>
+
+            <p>
+                Ser una cafetería reconocida en Cusco por
+                la calidad de nuestros productos, nuestra
+                creatividad y la experiencia acogedora que
+                ofrecemos a cada visitante.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     OBJETIVOS
+========================= -->
+
+<section class="objectives" id="objetivos">
+
+    <div class="section-title">
+
+        <h2>Objetivos estratégicos</h2>
+
+        <p>
+            El camino que seguimos para crecer.
+        </p>
+
+    </div>
+
+
+    <div class="objectives-grid">
+
+        <div class="objective">
+
+            <i class="fa-solid fa-mug-hot"></i>
+
+            <h3>Calidad</h3>
+
+            <p>
+                Mantener altos estándares en nuestros
+                cafés, bebidas y alimentos.
+            </p>
+
+        </div>
+
+
+        <div class="objective">
+
+            <i class="fa-solid fa-heart"></i>
+
+            <h3>Experiencia</h3>
+
+            <p>
+                Crear un ambiente agradable donde
+                cada visita sea especial.
+            </p>
+
+        </div>
+
+
+        <div class="objective">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3>Atención</h3>
+
+            <p>
+                Ofrecer una atención amable,
+                rápida y personalizada.
+            </p>
+
+        </div>
+
+
+        <div class="objective">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <h3>Innovación</h3>
+
+            <p>
+                Incorporar nuevas bebidas,
+                productos y experiencias.
+            </p>
+
+        </div>
+
+
+        <div class="objective">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>Crecimiento</h3>
+
+            <p>
+                Fortalecer nuestra presencia
+                y ampliar nuestro alcance.
+            </p>
+
+        </div>
+
+
+        <div class="objective">
+
+            <i class="fa-solid fa-star"></i>
+
+            <h3>Fidelización</h3>
+
+            <p>
+                Construir relaciones duraderas
+                con nuestros clientes.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VALORES
+========================= -->
+
+<section class="values" id="valores">
+
+    <div class="section-title">
+
+        <h2>Nuestros valores</h2>
+
+        <p>
+            Lo que representa a Cafetería Kusiy.
+        </p>
+
+    </div>
+
+
+    <div class="values-grid">
+
+        <div class="value">
+
+            <i class="fa-solid fa-fire"></i>
+
+            <h3>Calidez</h3>
+
+        </div>
+
+
+        <div class="value">
+
+            <i class="fa-solid fa-medal"></i>
+
+            <h3>Calidad</h3>
+
+        </div>
+
+
+        <div class="value">
+
+            <i class="fa-solid fa-handshake"></i>
+
+            <h3>Respeto</h3>
+
+        </div>
+
+
+        <div class="value">
+
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+            <h3>Creatividad</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CARTA
+========================= -->
+
+<section class="menu" id="carta">
+
+    <div class="section-title">
+
+        <h2>Nuestra carta</h2>
+
+        <p>
+            Elige tus favoritos.
+        </p>
+
+    </div>
+
+
+    <div class="categories">
+
+        <button class="category active" onclick="filterProducts('all', this)">
+            Todos
+        </button>
+
+        <button class="category" onclick="filterProducts('cafe', this)">
+            Cafés
+        </button>
+
+        <button class="category" onclick="filterProducts('bebida', this)">
+            Bebidas
+        </button>
+
+        <button class="category" onclick="filterProducts('postre', this)">
+            Postres
+        </button>
+
+        <button class="category" onclick="filterProducts('pan', this)">
+            Panadería
+        </button>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <!-- CAFÉS -->
+
+        <div class="product" data-category="cafe">
+
+            <img class="product-img"
+            src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80">
+
+            <div class="product-info">
+
+                <h3>Café Americano</h3>
+
+                <p>Café intenso y aromático.</p>
+
+                <span class="price">S/ 7</span>
+
+                <button class="add-cart"
+                onclick="addToCart('Café Americano', 7)">
+                    Agregar
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="product" data-category="cafe">
+
+            <img class="product-img"
+            src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80">
+
+            <div
