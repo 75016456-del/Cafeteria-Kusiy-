@@ -1,1197 +1,1562 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cafetería Kusiy en Cusco. Cafés, bebidas, postres, panadería y delivery. El arte de disfrutar un buen café.">
+<meta name="keywords" content="Cafetería Kusiy, café Cusco, cafetería Cusco, postres, delivery Cusco">
+<meta name="author" content="Cafetería Kusiy">
 
-    <meta name="description" content="Cafetería Kusiy - El arte de disfrutar un buen café. Cafés, bebidas, postres, panadería y delivery en Cusco.">
+<meta name="google-site-verification" content="LsuQU8q7nzLSirQDD7kK4hURobtdAPHl5pYxCP4qNYk" />
 
-    <meta name="keywords" content="Cafetería Kusiy, cafetería Cusco, café Cusco, postres Cusco, delivery Cusco, café artesanal">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/924/924514.png">
 
-    <meta name="author" content="Cafetería Kusiy">
+<title>Cafetería Kusiy | El arte de disfrutar un buen café</title>
 
-    <!-- VERIFICACIÓN DE GOOGLE SEARCH CONSOLE -->
-    <meta name="google-site-verification" content="LsuQU8q7nzLSirQDD7kK4hURobtdAPHl5pYxCP4qNYk" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/924/924514.png">
-
-    <title>Cafetería Kusiy | El arte de disfrutar un buen café</title>
-
-    <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-
-/* =========================
-   CONFIGURACIÓN GENERAL
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: "Cormorant Garamond", serif;
-    background: #120d0a;
-    color: #f4ead8;
-    line-height: 1.6;
+body{
+    background:#120b08;
+    color:#f4ead8;
+    font-family:"Cormorant Garamond",serif;
+    line-height:1.6;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+section{
+    padding:80px 7%;
 }
 
-section {
-    padding: 90px 7%;
+h1,h2,h3,.logo,button{
+    font-family:"Cinzel",serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-.logo {
-    font-family: "Cinzel", serif;
+/* NAV */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(12,7,5,.96);
+    border-bottom:1px solid #72572f;
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
+nav{
+    max-width:1200px;
+    margin:auto;
+    height:72px;
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-/* =========================
-   NAVBAR
-========================= */
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    background: rgba(15, 10, 7, 0.96);
-    border-bottom: 1px solid rgba(210, 166, 92, 0.3);
+.logo{
+    font-size:25px;
+    letter-spacing:4px;
+    color:#d7ae62;
 }
 
-.navbar {
-    max-width: 1250px;
-    margin: auto;
-    min-height: 75px;
-    padding: 0 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.logo span{
+    color:#fff1d2;
 }
 
-.logo {
-    font-size: 25px;
-    letter-spacing: 3px;
-    color: #d6ae62;
+.nav-links{
+    display:flex;
+    gap:22px;
+    list-style:none;
 }
 
-.logo span {
-    color: #f3e5c8;
+.nav-links a{
+    font-family:"Cinzel",serif;
+    font-size:13px;
 }
 
-.nav-links {
-    display: flex;
-    gap: 25px;
-    list-style: none;
+.nav-links a:hover{
+    color:#d7ae62;
 }
 
-.nav-links a {
-    font-family: "Cinzel", serif;
-    font-size: 13px;
-    color: #f4ead8;
-    transition: 0.3s;
+.menu-btn{
+    display:none;
+    font-size:25px;
+    color:#d7ae62;
+    cursor:pointer;
 }
 
-.nav-links a:hover {
-    color: #d6ae62;
-}
+/* HERO */
 
-.menu-btn {
-    display: none;
-    font-size: 25px;
-    color: #d6ae62;
-    cursor: pointer;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 
     background:
-        linear-gradient(rgba(10, 6, 4, 0.67), rgba(10, 6, 4, 0.83)),
-        url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=85")
-        center/cover fixed;
+    linear-gradient(rgba(10,5,3,.68),rgba(10,5,3,.88)),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
 }
 
-.hero-content {
-    max-width: 900px;
-    padding: 30px;
+.hero-content{
+    max-width:850px;
+    padding:30px;
 }
 
-.hero h1 {
-    font-size: clamp(55px, 10vw, 120px);
-    letter-spacing: 15px;
-    color: #d8b36b;
-    text-shadow: 0 5px 20px #000;
+.hero h1{
+    font-size:clamp(55px,10vw,110px);
+    letter-spacing:14px;
+    color:#d7ae62;
 }
 
-.hero h2 {
-    font-size: clamp(20px, 3vw, 32px);
-    margin-top: -5px;
-    color: #f5ead6;
+.hero h2{
+    font-size:clamp(20px,4vw,32px);
 }
 
-.hero p {
-    font-size: 20px;
-    margin: 25px auto;
-    max-width: 650px;
+.hero p{
+    font-size:20px;
+    margin:20px auto 30px;
+    max-width:650px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 13px 27px;
-    margin: 8px;
-    border: 1px solid #d6ae62;
-    background: #d6ae62;
-    color: #17100c;
-    font-family: "Cinzel", serif;
-    font-weight: bold;
-    transition: 0.3s;
+.btn{
+    display:inline-block;
+    padding:13px 25px;
+    margin:5px;
+    background:#d7ae62;
+    color:#170e09;
+    font-family:"Cinzel",serif;
+    font-weight:bold;
+    border:1px solid #d7ae62;
 }
 
-.btn:hover {
-    background: transparent;
-    color: #d6ae62;
+.btn:hover{
+    background:transparent;
+    color:#d7ae62;
 }
 
-/* =========================
-   TITULOS
-========================= */
+/* TITULOS */
 
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
+.title{
+    text-align:center;
+    margin-bottom:45px;
 }
 
-.section-title h2 {
-    font-size: 38px;
-    color: #d6ae62;
+.title h2{
+    color:#d7ae62;
+    font-size:36px;
 }
 
-.section-title p {
-    font-size: 19px;
-    color: #cbbda7;
+.title p{
+    color:#cdbda5;
+    font-size:19px;
 }
 
-/* =========================
-   NOSOTROS
-========================= */
+/* NOSOTROS */
 
-.about {
-    background: #1a110d;
+.about{
+    background:#1b100b;
 }
 
-.about-grid {
-    max-width: 1100px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
+.about-grid{
+    max-width:1050px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
 }
 
-.about-card {
-    background: #251812;
-    padding: 35px;
-    border: 1px solid rgba(214, 174, 98, 0.25);
+.card{
+    background:#271812;
+    border:1px solid #594326;
+    padding:30px;
 }
 
-.about-card h3 {
-    color: #d6ae62;
-    margin-bottom: 15px;
-    font-size: 25px;
+.card h3{
+    color:#d7ae62;
+    margin-bottom:12px;
 }
 
-.about-card p {
-    color: #ded1bb;
-    font-size: 18px;
+/* OBJETIVOS */
+
+.objectives{
+    background:#100906;
 }
 
-/* =========================
-   OBJETIVOS
-========================= */
-
-.objectives {
-    background: #100b08;
+.objectives-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.objectives-grid {
-    max-width: 1100px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.objective{
+    background:#21130d;
+    padding:25px;
+    text-align:center;
+    border-top:2px solid #d7ae62;
 }
 
-.objective {
-    padding: 30px;
-    text-align: center;
-    background: #21150f;
-    border-top: 2px solid #d6ae62;
-    transition: 0.3s;
+.objective i{
+    color:#d7ae62;
+    font-size:30px;
+    margin-bottom:10px;
 }
 
-.objective:hover {
-    transform: translateY(-7px);
+.objective h3{
+    margin-bottom:8px;
 }
 
-.objective i {
-    font-size: 32px;
-    color: #d6ae62;
-    margin-bottom: 15px;
-}
+/* VALORES */
 
-.objective h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.objective p {
-    color: #cfc0a9;
-}
-
-/* =========================
-   VALORES
-========================= */
-
-.values {
+.values{
     background:
-        linear-gradient(rgba(18, 11, 7, 0.9), rgba(18, 11, 7, 0.94)),
-        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
+    linear-gradient(rgba(20,10,6,.88),rgba(20,10,6,.94)),
+    url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
 }
 
-.values-grid {
-    max-width: 1000px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.values-grid{
+    max-width:900px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-.value {
-    text-align: center;
-    padding: 30px 15px;
+.value{
+    text-align:center;
+    padding:20px;
 }
 
-.value i {
-    font-size: 35px;
-    color: #d6ae62;
-    margin-bottom: 12px;
+.value i{
+    color:#d7ae62;
+    font-size:35px;
+    margin-bottom:10px;
 }
 
-.value h3 {
-    color: #fff0d1;
+/* CARTA */
+
+.menu{
+    background:#160d09;
 }
 
-/* =========================
-   CARTA
-========================= */
-
-.menu {
-    background: #17100c;
+.categories{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:30px;
 }
 
-.categories {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 35px;
-}
-
-.category {
-    cursor: pointer;
-    padding: 10px 18px;
-    border: 1px solid #8e6b38;
-    background: transparent;
-    color: #eadfc9;
-    font-family: "Cinzel", serif;
+.category{
+    padding:9px 17px;
+    background:transparent;
+    border:1px solid #806132;
+    color:#f4ead8;
+    cursor:pointer;
 }
 
 .category.active,
-.category:hover {
-    background: #d6ae62;
-    color: #17100c;
+.category:hover{
+    background:#d7ae62;
+    color:#160d09;
 }
 
-.products {
-    max-width: 1200px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
+.products{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-.product {
-    background: #251812;
-    border: 1px solid rgba(214, 174, 98, 0.2);
-    overflow: hidden;
-    transition: 0.3s;
+.product{
+    background:#24150f;
+    border:1px solid #4d3822;
+    overflow:hidden;
 }
 
-.product:hover {
-    transform: translateY(-5px);
-    border-color: #d6ae62;
+.product img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
 }
 
-.product-img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
+.product-info{
+    padding:18px;
 }
 
-.product-info {
-    padding: 20px;
+.product-info h3{
+    font-size:18px;
 }
 
-.product-info h3 {
-    font-size: 19px;
-    color: #f5e5c6;
+.product-info p{
+    color:#bfae96;
+    min-height:45px;
 }
 
-.product-info p {
-    color: #bfb09a;
-    min-height: 48px;
+.price{
+    display:block;
+    color:#d7ae62;
+    font-family:"Cinzel",serif;
+    font-size:18px;
+    margin:8px 0;
 }
 
-.price {
-    display: block;
-    margin: 10px 0;
-    font-family: "Cinzel", serif;
-    font-size: 19px;
-    color: #d6ae62;
+.add{
+    width:100%;
+    padding:10px;
+    border:0;
+    background:#d7ae62;
+    cursor:pointer;
+    font-weight:bold;
 }
 
-.add-cart {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-
-    background: #d6ae62;
-    color: #17100c;
-
-    font-family: "Cinzel", serif;
-    font-weight: bold;
+.add:hover{
+    background:#f0d397;
 }
 
-.add-cart:hover {
-    background: #f0d398;
+/* GALERIA */
+
+.gallery{
+    background:#0d0705;
 }
 
-/* =========================
-   GALERÍA
-========================= */
-
-.gallery {
-    background: #0e0907;
+.gallery-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
 }
 
-.gallery-grid {
-    max-width: 1200px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+.gallery-grid img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
 }
 
-.gallery-grid img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: 0.4s;
-}
+/* DELIVERY */
 
-.gallery-grid img:hover {
-    transform: scale(1.03);
-}
-
-/* =========================
-   TESTIMONIOS
-========================= */
-
-.testimonials {
-    background: #1c120d;
-}
-
-.testimonial-grid {
-    max-width: 1000px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.testimonial {
-    background: #261811;
-    padding: 30px;
-    border-left: 3px solid #d6ae62;
-}
-
-.testimonial p {
-    font-size: 18px;
-    font-style: italic;
-    color: #dfd2bc;
-}
-
-.stars {
-    color: #d6ae62;
-    margin-top: 15px;
-}
-
-/* =========================
-   DELIVERY
-========================= */
-
-.delivery {
+.delivery{
+    text-align:center;
     background:
-        linear-gradient(rgba(15, 8, 5, 0.88), rgba(15, 8, 5, 0.94)),
-        url("https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
-    text-align: center;
+    linear-gradient(rgba(15,7,4,.88),rgba(15,7,4,.94)),
+    url("https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
 }
 
-.delivery-content {
-    max-width: 800px;
-    margin: auto;
+.delivery h2{
+    color:#d7ae62;
+    font-size:38px;
 }
 
-.delivery h2 {
-    color: #d6ae62;
-    font-size: 40px;
+.delivery p{
+    font-size:20px;
+    max-width:700px;
+    margin:20px auto;
 }
 
-.delivery p {
-    font-size: 20px;
-    margin: 20px 0;
+/* CONTACTO */
+
+.contact{
+    text-align:center;
+    background:#130b08;
 }
 
-/* =========================
-   CONTACTO
-========================= */
-
-.contact {
-    background: #110b08;
-    text-align: center;
+.contact-grid{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
 }
 
-.contact-info {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 30px;
+.contact-item i{
+    color:#d7ae62;
+    font-size:25px;
 }
 
-.contact-item i {
-    color: #d6ae62;
-    font-size: 25px;
-    margin-bottom: 8px;
+.contact-item p{
+    color:#cdbda5;
 }
 
-.contact-item p {
-    color: #d4c5ad;
+/* CARRITO */
+
+.cart-button{
+    position:fixed;
+    right:22px;
+    bottom:90px;
+    width:58px;
+    height:58px;
+    border:0;
+    border-radius:50%;
+    background:#d7ae62;
+    color:#160d09;
+    font-size:22px;
+    cursor:pointer;
+    z-index:1500;
 }
 
-/* =========================
-   CARRITO
-========================= */
-
-.cart-panel {
-    position: fixed;
-    right: -400px;
-    top: 0;
-
-    width: 370px;
-    max-width: 90%;
-    height: 100vh;
-
-    background: #1c120e;
-    z-index: 2000;
-
-    padding: 25px;
-
-    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
-
-    transition: 0.4s;
-
-    overflow-y: auto;
+.cart-count{
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    background:#9d1e1e;
+    color:white;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    font-size:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.cart-panel.open {
-    right: 0;
+.cart{
+    position:fixed;
+    top:0;
+    right:-400px;
+    width:370px;
+    max-width:100%;
+    height:100vh;
+    background:#1d100b;
+    z-index:2000;
+    padding:25px;
+    transition:.4s;
+    overflow:auto;
+    box-shadow:-5px 0 25px #000;
 }
 
-.cart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    border-bottom: 1px solid #5e4828;
-    padding-bottom: 15px;
+.cart.open{
+    right:0;
 }
 
-.cart-header h2 {
-    color: #d6ae62;
+.cart-head{
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid #604825;
+    padding-bottom:15px;
 }
 
-.close-cart {
-    cursor: pointer;
-    font-size: 25px;
+.cart-head h2{
+    color:#d7ae62;
 }
 
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    gap: 10px;
-
-    padding: 15px 0;
-    border-bottom: 1px solid #443329;
+.close{
+    font-size:28px;
+    cursor:pointer;
 }
 
-.cart-item h4 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 18px;
+.cart-item{
+    padding:15px 0;
+    border-bottom:1px solid #443125;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
 }
 
-.quantity {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.quantity{
+    display:flex;
+    align-items:center;
+    gap:7px;
 }
 
-.quantity button {
-    width: 25px;
-    height: 25px;
-
-    border: none;
-    cursor: pointer;
-
-    background: #d6ae62;
-    color: #17100c;
+.quantity button{
+    width:25px;
+    height:25px;
+    border:0;
+    background:#d7ae62;
+    cursor:pointer;
 }
 
-.cart-total {
-    margin-top: 25px;
-    font-family: "Cinzel", serif;
-    font-size: 21px;
-    color: #d6ae62;
+.total{
+    color:#d7ae62;
+    font-size:21px;
+    font-family:"Cinzel",serif;
+    margin-top:20px;
 }
 
-.whatsapp-order {
-    display: block;
-    margin-top: 20px;
-
-    padding: 14px;
-
-    text-align: center;
-
-    background: #25d366;
-    color: white;
-
-    font-family: "Cinzel", serif;
+.order{
+    display:block;
+    background:#25d366;
+    color:white;
+    text-align:center;
+    padding:13px;
+    margin-top:20px;
+    font-family:"Cinzel",serif;
 }
 
-/* =========================
-   BOTONES FLOTANTES
-========================= */
+/* WHATSAPP */
 
-.whatsapp {
-    position: fixed;
-    right: 22px;
-    bottom: 22px;
-
-    width: 58px;
-    height: 58px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #25d366;
-    color: white;
-
-    border-radius: 50%;
-
-    font-size: 28px;
-
-    z-index: 1000;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25d366;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    z-index:1500;
 }
 
-.cart-button {
-    position: fixed;
-    right: 22px;
-    bottom: 95px;
+/* FOOTER */
 
-    width: 58px;
-    height: 58px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: #d6ae62;
-    color: #17100c;
-
-    font-size: 23px;
-
-    cursor: pointer;
-
-    z-index: 1000;
+footer{
+    background:#080403;
+    text-align:center;
+    padding:30px;
+    color:#9b8b76;
 }
 
-.cart-count {
-    position: absolute;
-    top: -4px;
-    right: -4px;
-
-    width: 22px;
-    height: 22px;
-
-    border-radius: 50%;
-
-    background: #9c1c1c;
-    color: white;
-
-    font-size: 12px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer .logo{
+    margin-bottom:8px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* RESPONSIVE */
 
-footer {
-    padding: 35px 7%;
-    background: #090604;
-    text-align: center;
+@media(max-width:950px){
 
-    border-top: 1px solid rgba(214,174,98,0.2);
-}
-
-footer .logo {
-    margin-bottom: 10px;
-}
-
-footer p {
-    color: #958878;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 1000px) {
-
-    .products {
-        grid-template-columns: repeat(3, 1fr);
+    .products{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .objectives-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .objectives-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .values-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .values-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 }
 
-@media (max-width: 750px) {
+@media(max-width:700px){
 
-    section {
-        padding: 70px 5%;
+    .menu-btn{
+        display:block;
     }
 
-    .menu-btn {
-        display: block;
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:0;
+        width:100%;
+        background:#120b08;
+        flex-direction:column;
+        text-align:center;
+        padding:20px;
     }
 
-    .nav-links {
-        position: absolute;
-
-        top: 75px;
-        left: 0;
-
-        width: 100%;
-
-        background: #120d0a;
-
-        display: none;
-        flex-direction: column;
-
-        padding: 20px;
-
-        text-align: center;
+    .nav-links.active{
+        display:flex;
     }
 
-    .nav-links.active {
-        display: flex;
+    .about-grid{
+        grid-template-columns:1fr;
     }
 
-    .about-grid,
-    .testimonial-grid {
-        grid-template-columns: 1fr;
+    .products{
+        grid-template-columns:1fr;
     }
 
-    .products {
-        grid-template-columns: repeat(2, 1fr);
+    .objectives-grid{
+        grid-template-columns:1fr;
     }
 
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hero h1 {
-        letter-spacing: 8px;
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
     }
 }
 
-@media (max-width: 500px) {
+@media(max-width:450px){
 
-    .products {
-        grid-template-columns: 1fr;
+    section{
+        padding:65px 5%;
     }
 
-    .objectives-grid {
-        grid-template-columns: 1fr;
+    .gallery-grid{
+        grid-template-columns:1fr;
     }
 
-    .values-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-grid img {
-        height: 220px;
-    }
-
-    .cart-panel {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .hero p {
-        font-size: 18px;
+    .cart{
+        width:100%;
     }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     NAVEGACIÓN
-========================= -->
-
 <header>
+<nav>
 
-<nav class="navbar">
+<a href="#inicio" class="logo">
+KUSIY<span>.</span>
+</a>
 
-    <a href="#inicio" class="logo">
-        KUSIY<span>.</span>
-    </a>
+<div class="menu-btn" onclick="menu()">
+<i class="fa-solid fa-bars"></i>
+</div>
 
-    <div class="menu-btn" onclick="toggleMenu()">
-        <i class="fa-solid fa-bars"></i>
-    </div>
-
-    <ul class="nav-links" id="navLinks">
-
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#objetivos">Objetivos</a></li>
-        <li><a href="#valores">Valores</a></li>
-        <li><a href="#carta">Carta</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#delivery">Delivery</a></li>
-
-    </ul>
+<ul class="nav-links" id="nav">
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#objetivos">Objetivos</a></li>
+<li><a href="#valores">Valores</a></li>
+<li><a href="#carta">Carta</a></li>
+<li><a href="#galeria">Galería</a></li>
+<li><a href="#delivery">Delivery</a></li>
+</ul>
 
 </nav>
-
 </header>
 
 
-<!-- =========================
-     INICIO
-========================= -->
+<!-- INICIO -->
 
 <section class="hero" id="inicio">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <h1>KUSIY</h1>
+<h1>KUSIY</h1>
 
-        <h2>El arte de disfrutar un buen café</h2>
+<h2>El arte de disfrutar un buen café</h2>
 
-        <p>
-            Un espacio donde el aroma del café,
-            la tradición y los buenos momentos se encuentran.
-        </p>
+<p>
+Un espacio donde el aroma del café,
+la tradición y los buenos momentos se encuentran.
+</p>
 
-        <a href="#carta" class="btn">
-            Ver nuestra carta
-        </a>
+<a href="#carta" class="btn">
+Ver nuestra carta
+</a>
 
-        <a href="https://wa.me/51962130192?text=Hola%20Cafeter%C3%ADa%20Kusiy%2C%20quisiera%20realizar%20un%20pedido."
-           class="btn"
-           target="_blank">
-            Pedir por WhatsApp
-        </a>
+<a class="btn"
+href="https://wa.me/51962130192?text=Hola%20Cafeter%C3%ADa%20Kusiy%2C%20quisiera%20realizar%20un%20pedido."
+target="_blank">
+Pedir por WhatsApp
+</a>
 
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     NOSOTROS
-========================= -->
+<!-- NOSOTROS -->
 
 <section class="about" id="nosotros">
 
-    <div class="section-title">
+<div class="title">
 
-        <h2>Sobre Kusiy</h2>
+<h2>Sobre Kusiy</h2>
 
-        <p>
-            Más que una cafetería, una experiencia.
-        </p>
+<p>Más que una cafetería, una experiencia.</p>
 
-    </div>
+</div>
 
+<div class="about-grid">
 
-    <div class="about-grid">
+<div class="card">
 
-        <div class="about-card">
+<h3>Nuestra misión</h3>
 
-            <h3>Nuestra misión</h3>
+<p>
+Brindar una experiencia cálida y memorable
+mediante cafés, bebidas, postres y productos
+de calidad, acompañados de una atención
+cercana y personalizada.
+</p>
 
-            <p>
-                Brindar una experiencia cálida y memorable
-                a nuestros clientes mediante cafés, bebidas,
-                postres y productos de calidad, acompañados
-                de una atención cercana y personalizada.
-            </p>
+</div>
 
-        </div>
+<div class="card">
 
+<h3>Nuestra visión</h3>
 
-        <div class="about-card">
+<p>
+Ser una cafetería reconocida en Cusco por
+la calidad de nuestros productos, nuestra
+creatividad y la experiencia acogedora que
+ofrecemos a cada visitante.
+</p>
 
-            <h3>Nuestra visión</h3>
+</div>
 
-            <p>
-                Ser una cafetería reconocida en Cusco por
-                la calidad de nuestros productos, nuestra
-                creatividad y la experiencia acogedora que
-                ofrecemos a cada visitante.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     OBJETIVOS
-========================= -->
+<!-- OBJETIVOS -->
 
 <section class="objectives" id="objetivos">
 
-    <div class="section-title">
+<div class="title">
 
-        <h2>Objetivos estratégicos</h2>
+<h2>Objetivos estratégicos</h2>
 
-        <p>
-            El camino que seguimos para crecer.
-        </p>
+<p>El camino que seguimos para crecer.</p>
 
-    </div>
+</div>
 
+<div class="objectives-grid">
 
-    <div class="objectives-grid">
+<div class="objective">
+<i class="fa-solid fa-mug-hot"></i>
+<h3>Calidad</h3>
+<p>Mantener altos estándares en nuestros productos.</p>
+</div>
 
-        <div class="objective">
+<div class="objective">
+<i class="fa-solid fa-heart"></i>
+<h3>Experiencia</h3>
+<p>Crear un ambiente agradable y memorable.</p>
+</div>
 
-            <i class="fa-solid fa-mug-hot"></i>
+<div class="objective">
+<i class="fa-solid fa-users"></i>
+<h3>Atención</h3>
+<p>Ofrecer una atención amable y personalizada.</p>
+</div>
 
-            <h3>Calidad</h3>
+<div class="objective">
+<i class="fa-solid fa-lightbulb"></i>
+<h3>Innovación</h3>
+<p>Incorporar nuevas bebidas y experiencias.</p>
+</div>
 
-            <p>
-                Mantener altos estándares en nuestros
-                cafés, bebidas y alimentos.
-            </p>
+<div class="objective">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Crecimiento</h3>
+<p>Fortalecer nuestra presencia en Cusco.</p>
+</div>
 
-        </div>
+<div class="objective">
+<i class="fa-solid fa-star"></i>
+<h3>Fidelización</h3>
+<p>Construir relaciones duraderas con clientes.</p>
+</div>
 
-
-        <div class="objective">
-
-            <i class="fa-solid fa-heart"></i>
-
-            <h3>Experiencia</h3>
-
-            <p>
-                Crear un ambiente agradable donde
-                cada visita sea especial.
-            </p>
-
-        </div>
-
-
-        <div class="objective">
-
-            <i class="fa-solid fa-users"></i>
-
-            <h3>Atención</h3>
-
-            <p>
-                Ofrecer una atención amable,
-                rápida y personalizada.
-            </p>
-
-        </div>
-
-
-        <div class="objective">
-
-            <i class="fa-solid fa-lightbulb"></i>
-
-            <h3>Innovación</h3>
-
-            <p>
-                Incorporar nuevas bebidas,
-                productos y experiencias.
-            </p>
-
-        </div>
-
-
-        <div class="objective">
-
-            <i class="fa-solid fa-chart-line"></i>
-
-            <h3>Crecimiento</h3>
-
-            <p>
-                Fortalecer nuestra presencia
-                y ampliar nuestro alcance.
-            </p>
-
-        </div>
-
-
-        <div class="objective">
-
-            <i class="fa-solid fa-star"></i>
-
-            <h3>Fidelización</h3>
-
-            <p>
-                Construir relaciones duraderas
-                con nuestros clientes.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     VALORES
-========================= -->
+<!-- VALORES -->
 
 <section class="values" id="valores">
 
-    <div class="section-title">
+<div class="title">
 
-        <h2>Nuestros valores</h2>
+<h2>Nuestros valores</h2>
 
-        <p>
-            Lo que representa a Cafetería Kusiy.
-        </p>
+<p>Lo que representa a Cafetería Kusiy.</p>
 
-    </div>
+</div>
 
+<div class="values-grid">
 
-    <div class="values-grid">
+<div class="value">
+<i class="fa-solid fa-fire"></i>
+<h3>Calidez</h3>
+</div>
 
-        <div class="value">
+<div class="value">
+<i class="fa-solid fa-medal"></i>
+<h3>Calidad</h3>
+</div>
 
-            <i class="fa-solid fa-fire"></i>
+<div class="value">
+<i class="fa-solid fa-handshake"></i>
+<h3>Respeto</h3>
+</div>
 
-            <h3>Calidez</h3>
+<div class="value">
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+<h3>Creatividad</h3>
+</div>
 
-        </div>
-
-
-        <div class="value">
-
-            <i class="fa-solid fa-medal"></i>
-
-            <h3>Calidad</h3>
-
-        </div>
-
-
-        <div class="value">
-
-            <i class="fa-solid fa-handshake"></i>
-
-            <h3>Respeto</h3>
-
-        </div>
-
-
-        <div class="value">
-
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-
-            <h3>Creatividad</h3>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     CARTA
-========================= -->
+<!-- CARTA -->
 
 <section class="menu" id="carta">
 
-    <div class="section-title">
+<div class="title">
 
-        <h2>Nuestra carta</h2>
+<h2>Nuestra carta</h2>
 
-        <p>
-            Elige tus favoritos.
-        </p>
+<p>Elige tus favoritos.</p>
+
+</div>
+
+<div class="categories">
+
+<button class="category active" onclick="filtrar('todos',this)">
+Todos
+</button>
+
+<button class="category" onclick="filtrar('cafe',this)">
+Cafés
+</button>
+
+<button class="category" onclick="filtrar('bebida',this)">
+Bebidas
+</button>
+
+<button class="category" onclick="filtrar('postre',this)">
+Postres
+</button>
+
+<button class="category" onclick="filtrar('pan',this)">
+Panadería
+</button>
+
+</div>
+
+<div class="products">
+
+
+<!-- CAFÉ -->
+
+<div class="product" data-type="cafe">
+
+<img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Café Americano</h3>
+<p>Café intenso y aromático.</p>
+<span class="price">S/ 7</span>
+
+<button class="add" onclick="agregar('Café Americano',7)">
+Agregar
+</button>
+
+</div>
+</div>
+
+
+<div class="product" data-type="cafe">
+
+<img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Cappuccino</h3>
+<p>Espresso, leche y espuma.</p>
+<span class="price">S/ 10</span>
+
+<button class="add" onclick="agregar('Cappuccino',10)">
+Agregar
+</button>
+
+</div>
+</div>
+
+
+<div class="product" data-type="cafe">
+
+<img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Latte</h3>
+<p>Café suave con leche cremosa.</p>
+<span class="price">S/ 10</span>
+
+<button class="add" onclick="agregar('Latte',10)">
+Agregar
+</button>
+
+</div>
+</div>
+
+
+<div class="product" data-type="cafe">
+
+<img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Mocha</h3>
+<p>Café, chocolate y leche.</p>
+<span class="price">S/ 12</span>
+
+<button class="add" onclick="agregar('Mocha',12)">
+Agregar
+</button>
+
+</div>
+</div>
+
+
+<div class="product" data-type="cafe">
+
+<img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Frappé de Café</h3>
+<p>Bebida fría y cremosa.</p>
+<span class="price">S/ 13</span>
+
+<button class="add" onclick="agregar('Frappé de Café',13)">
+Agregar
+</button>
+
+</div>
+</div>
+
+
+<!-- BEBIDAS -->
+
+<div class="product" data-type="bebida">
+
+<img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Chocolate Caliente</h3>
+<p>Chocolate caliente y cremoso.</p>
+<span class="price">S/ 9</span>
+
+<button class="add" onclick="agregar('Chocolate Caliente',9)">
+Agregar
+</button>
+
+</div>
+</div>
+
+
+<div class="product" data-type="bebida">
+
+<img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Bebida Natural</h3>
+<p>Refrescante y preparada al momento.</p>
+<span class="price">S/ 8</span>
+
+<button class="add" onclick="agregar('Bebida Natural',8)">
+Agregar
+</button>
+
+</div>
+</div>
+
+
+<!-- POSTRES -->
+
+<div class="product" data-type="postre">
+
+<img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Cheesecake</h3>
+<p>Suave y cremoso.</p>
+<span class="price">S/ 12</span>
+
+<button class="add" onclick="agregar('Cheesecake',12)">
+Agregar
+</button>
+
+</div>
+</div>
+
+
+<div class="product" data-type="postre">
+
+<img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Brownie de Chocolate</h3>
+<p>Chocolate intenso.</p>
+<span class="price">S/ 9</span>
+
+<button class="add" onclick="agregar('Brownie de Chocolate',9)">
+Agregar
+</button>
+
+</div>
+</div>
+
+
+<div class="product" data-type="postre">
+
+<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Donas</h3>
+<p>Suaves y deliciosas.</p>
+<span class="price">S/ 7</span>
+
+<button class="add" onclick="agregar('Donas',7)">
+Agregar
+</button>
+
+</div>
+</div>
+
+
+<!-- PANADERÍA -->
+
+<div class="product" data-type="pan">
+
+<img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Croissant</h3>
+<p>Panadería hojaldrada.</p>
+<span class="price">S/ 8</span>
+
+<button class="add" onclick="agregar('Croissant',8)">
+Agregar
+</button>
+
+</div>
+</div>
+
+
+<div class="product" data-type="pan">
+
+<img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Pan Artesanal</h3>
+<p>Pan fresco artesanal.</p>
+<span class="price">S/ 6</span>
+
+<button class="add" onclick="agregar('Pan Artesanal',6)">
+Agregar
+</button>
+
+</div>
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- GALERÍA -->
+
+<section class="gallery" id="galeria">
+
+<div class="title">
+
+<h2>Galería</h2>
+
+<p>Un vistazo al mundo Kusiy.</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80">
+
+<img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=80">
+
+<img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1000&q=80">
+
+<img src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?auto=format&fit=crop&w=1000&q=80">
+
+<img src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?auto=format&fit=crop&w=1000&q=80">
+
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=80">
+
+</div>
+
+</section>
+
+
+<!-- DELIVERY -->
+
+<section class="delivery" id="delivery">
+
+<h2>Delivery Kusiy</h2>
+
+<p>
+Disfruta nuestros productos desde casa.
+Realiza tu pedido directamente por WhatsApp.
+</p>
+
+<a class="btn"
+href="https://wa.me/51962130192?text=Hola%20Cafeter%C3%ADa%20Kusiy%2C%20quiero%20hacer%20un%20pedido."
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+Pedir por WhatsApp
+
+</a>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section class="contact">
+
+<div class="title">
+
+<h2>Visítanos</h2>
+
+<p>Estamos felices de recibirte.</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-item">
+<i class="fa-solid fa-location-dot"></i>
+<p>Cusco, Perú</p>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-clock"></i>
+<p>8:00 AM – 9:00 PM</p>
+</div>
+
+<div class="contact-item">
+<i class="fa-brands fa-whatsapp"></i>
+<p>+51 962 130 192</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CARRITO -->
+
+<div class="cart" id="cart">
+
+<div class="cart-head">
+
+<h2>Mi pedido</h2>
+
+<span class="close" onclick="cerrarCarrito()">×</span>
+
+</div>
+
+<div id="items"></div>
+
+<div class="total">
+Total: S/ <span id="total">0.00</span>
+</div>
+
+<a id="pedido"
+class="order"
+href="#"
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+Enviar pedido
+
+</a>
+
+</div>
+
+
+<button class="cart-button" onclick="abrirCarrito()">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span class="cart-count" id="cantidad">
+0
+</span>
+
+</button>
+
+
+<a class="whatsapp"
+href="https://wa.me/51962130192"
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<footer>
+
+    <div class="logo">
+        KUSIY.
+    </div>
+
+    <p>
+        © 2026 Cafetería Kusiy · El arte de disfrutar un buen café.
+    </p>
+
+</footer>
+
+
+<!-- =========================
+     CARRITO DE COMPRAS
+========================= -->
+
+<div class="cart" id="cart">
+
+    <div class="cart-head">
+
+        <h2>Mi pedido</h2>
+
+        <span class="close" onclick="cerrarCarrito()">×</span>
 
     </div>
 
+    <div id="items"></div>
 
-    <div class="categories">
-
-        <button class="category active" onclick="filterProducts('all', this)">
-            Todos
-        </button>
-
-        <button class="category" onclick="filterProducts('cafe', this)">
-            Cafés
-        </button>
-
-        <button class="category" onclick="filterProducts('bebida', this)">
-            Bebidas
-        </button>
-
-        <button class="category" onclick="filterProducts('postre', this)">
-            Postres
-        </button>
-
-        <button class="category" onclick="filterProducts('pan', this)">
-            Panadería
-        </button>
-
+    <div class="total">
+        Total: S/ <span id="total">0.00</span>
     </div>
 
+    <a
+        id="pedido"
+        class="order"
+        href="#"
+        target="_blank">
 
-    <div class="products">
+        <i class="fa-brands fa-whatsapp"></i>
+        Enviar pedido por WhatsApp
+
+    </a>
+
+</div>
 
 
-        <!-- CAFÉS -->
+<!-- =========================
+     BOTÓN DEL CARRITO
+========================= -->
 
-        <div class="product" data-category="cafe">
+<button
+    class="cart-button"
+    onclick="abrirCarrito()">
 
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80">
+    <i class="fa-solid fa-cart-shopping"></i>
 
-            <div class="product-info">
+    <span
+        class="cart-count"
+        id="cantidad">
+        0
+    </span>
 
-                <h3>Café Americano</h3>
+</button>
 
-                <p>Café intenso y aromático.</p>
 
-                <span class="price">S/ 7</span>
+<!-- =========================
+     BOTÓN WHATSAPP
+========================= -->
 
-                <button class="add-cart"
-                onclick="addToCart('Café Americano', 7)">
-                    Agregar
+<a
+    class="whatsapp"
+    href="https://wa.me/51962130192"
+    target="_blank"
+    aria-label="Contactar por WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<script>
+
+/* =========================
+   MENÚ MÓVIL
+========================= */
+
+function menu() {
+
+    document
+        .getElementById("nav")
+        .classList
+        .toggle("active");
+
+}
+
+
+/* =========================
+   FILTROS DE PRODUCTOS
+========================= */
+
+function filtrar(tipo, boton) {
+
+    document
+        .querySelectorAll(".category")
+        .forEach(b => {
+            b.classList.remove("active");
+        });
+
+    boton.classList.add("active");
+
+    document
+        .querySelectorAll(".product")
+        .forEach(producto => {
+
+            if (
+                tipo === "todos" ||
+                producto.dataset.type === tipo
+            ) {
+
+                producto.style.display = "block";
+
+            } else {
+
+                producto.style.display = "none";
+
+            }
+
+        });
+
+}
+
+
+/* =========================
+   CARRITO
+========================= */
+
+let carrito = [];
+
+
+function agregar(nombre, precio) {
+
+    let producto = carrito.find(
+        p => p.nombre === nombre
+    );
+
+    if (producto) {
+
+        producto.cantidad++;
+
+    } else {
+
+        carrito.push({
+            nombre: nombre,
+            precio: precio,
+            cantidad: 1
+        });
+
+    }
+
+    actualizar();
+
+    abrirCarrito();
+
+}
+
+
+function cambiar(index, valor) {
+
+    carrito[index].cantidad += valor;
+
+    if (carrito[index].cantidad <= 0) {
+
+        carrito.splice(index, 1);
+
+    }
+
+    actualizar();
+
+}
+
+
+function actualizar() {
+
+    const contenedor =
+        document.getElementById("items");
+
+    contenedor.innerHTML = "";
+
+    let total = 0;
+    let cantidad = 0;
+
+
+    carrito.forEach((producto, index) => {
+
+        total +=
+            producto.precio *
+            producto.cantidad;
+
+        cantidad +=
+            producto.cantidad;
+
+
+        const div =
+            document.createElement("div");
+
+        div.className = "cart-item";
+
+
+        div.innerHTML = `
+
+            <div>
+
+                <strong>
+                    ${producto.nombre}
+                </strong>
+
+                <br>
+
+                <small>
+                    S/ ${producto.precio.toFixed(2)}
+                </small>
+
+            </div>
+
+            <div class="quantity">
+
+                <button
+                    onclick="cambiar(${index}, -1)">
+                    −
+                </button>
+
+                <span>
+                    ${producto.cantidad}
+                </span>
+
+                <button
+                    onclick="cambiar(${index}, 1)">
+                    +
                 </button>
 
             </div>
 
-        </div>
+        `;
 
 
-        <div class="product" data-category="cafe">
+        contenedor.appendChild(div);
 
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80">
+    });
 
-            <div
+
+    document.getElementById("total")
+        .textContent = total.toFixed(2);
+
+    document.getElementById("cantidad")
+        .textContent = cantidad;
+
+
+    /* =========================
+       CREAR PEDIDO WHATSAPP
+    ========================= */
+
+    let mensaje =
+        "Hola Cafetería Kusiy 👋%0A%0A";
+
+    mensaje +=
+        "Mi pedido es:%0A%0A";
+
+
+    carrito.forEach(producto => {
+
+        const subtotal =
+            producto.precio *
+            producto.cantidad;
+
+        mensaje +=
+            `• ${producto.nombre} x${producto.cantidad} - S/ ${subtotal.toFixed(2)}%0A`;
+
+    });
+
+
+    mensaje +=
+        `%0ATotal: S/ ${total.toFixed(2)}`;
+
+
+    document.getElementById("pedido").href =
+        "https://wa.me/51962130192?text=" +
+        mensaje;
+
+}
+
+
+/* =========================
+   ABRIR CARRITO
+========================= */
+
+function abrirCarrito() {
+
+    document
+        .getElementById("cart")
+        .classList
+        .add("open");
+
+}
+
+
+/* =========================
+   CERRAR CARRITO
+========================= */
+
+function cerrarCarrito() {
+
+    document
+        .getElementById("cart")
+        .classList
+        .remove("open");
+
+}
+
+
+/* =========================
+   CERRAR MENÚ AL SELECCIONAR
+========================= */
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            document
+                .getElementById("nav")
+                .classList
+                .remove("active");
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
